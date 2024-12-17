@@ -5,10 +5,10 @@ const MostSeenTrainings = () => {
   return (
     <section className="flex flex-col gap-10 md:px-desktop_padding sm:px-tablet_padding px-mobile_padding mb-16">
       <div className="flex justify-center gap-1 items-center shrink-0 self-stretch">
-        <p className="font-bold md:text-3xl text-xl text-center whitespace-nowrap">
+        <p className="font-bold md:text-3xl text-xl text-center">
           Nos formations les plus demandées !
         </p>
-        <div className="-ml-[45px] mt-[36px]">
+        <div className="md:flex hidden -ml-[45px] mt-[36px]">
           <svg
             width="45"
             height="12"
