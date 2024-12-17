@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
@@ -11,7 +12,7 @@ module.exports = {
         footer_text_color: "#fff",
         footer_text_hover_color: "#fff",
         footer_background_color: "#2234A8",
-        main_color: "",
+        main_color: "#2234A8",
         secondary_color: "",
         bgFrom: "#4C0873",
         bgTo: "#4C0873",
@@ -45,5 +46,17 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".scrollbar-hide": {
+          "-ms-overflow-style": "none",
+          "scrollbar-width": "none",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        },
+      });
+    }),
+  ],
 };

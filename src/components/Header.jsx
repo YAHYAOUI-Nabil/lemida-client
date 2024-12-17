@@ -122,6 +122,12 @@ const Header = () => {
         >
           Contactez-nous
         </NavLink>
+        <NavLink
+          to="/login"
+          className="flex items-center justify-center rounded-full text-white font-medium md:text-base text-xs px-4 py-2 bg-gradient-to-r from-[#5869d4] to-[#2234a8] transition-all ease-in-out duration-500"
+        >
+          Connexion
+        </NavLink>
       </div>
 
       <div className="lg:flex hidden w-[264px] h-10 ml-6">

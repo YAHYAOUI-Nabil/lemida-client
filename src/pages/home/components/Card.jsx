@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 const Card = (props) => {
   const { imageUrl, title, description } = props;
   return (
-    <section className="relative group flex flex-col w-[266px] max-w-[266px] min-w-[266px] h-[380px] bg-white overflow-hidden">
+    <section className="relative group flex flex-col h-[380px] bg-white overflow-hidden">
       <NavLink
         to="/categories/tech"
-        className="w-full h-full px-5 absolute top-0 translate-y-full group-hover:translate-y-0 ease-in-out duration-1000 bg-gradient-to-r from-footer_background_color to-footer_background_color z-50 rounded-2xl cursor-pointer"
+        className="w-full h-full px-5 absolute top-0 translate-y-full group-hover:translate-y-0 ease-in-out duration-1000 bg-gradient-to-r from-footer_background_color to-footer_background_color z-50 cursor-pointer"
       >
         <div className="relative flex flex-col justify-end-end">
           <div className="absolute top-10 right-0 z-20">
@@ -91,7 +91,7 @@ const Card = (props) => {
           </div>
         </div>
       </NavLink>
-      <div className="flex flex-col w-[266px] max-w-[266px] min-w-[266px] h-[380px] bg-white rounded-2xl border-[3px] border-[#F6F6F6] overflow-hidden">
+      <div className="flex flex-col h-[380px] bg-white border-[3px] border-[#F6F6F6] overflow-hidden">
         <div className="w-full h-[277px] relative">
           <img
             className="w-full h-[277px] object-cover"

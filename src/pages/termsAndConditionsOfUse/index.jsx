@@ -1,12 +1,8 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
 const TermsAndConditions = () => {
   return (
     <div className="flex flex-col gap-[22px] md:px-desktop_padding sm:px-tablet_padding px-mobile_padding my-14 pb-8">
-      <Helmet>
-        <title>Conditions générales</title>
-      </Helmet>
       <div className="flex flex-col gap-8">
         <h1 className="sm:font-bold font-semibold sm:text-[42px] text-[21px]">
           Conditions générales

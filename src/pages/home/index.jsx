@@ -1,21 +1,28 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import Hero from "./components/Hero";
 import MostSeenTrainings from "./components/MostSeenTrainings";
+import Testimonial from "./components/Testimonial";
+import WhyChooseUs from "./components/WhyChooseUs";
+import HowItWorks from "./components/HowItWorks";
+import TopCategories from "./components/TopCategories";
+import NextTrainings from "./components/NextTrainings";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init({ duration: 1000 });
+AOS.refresh();
 
 const Home = () => {
   return (
-    <>
-      <Helmet>
-        <title>Lemida</title>
-        <meta name="description" content="Welcome to the home page of lemida" />
-        <meta name="keywords" content="formation, gestion, finance" />
-      </Helmet>
-      <section className="flex flex-col gap-10 mb-10">
-        <Hero />
-        <MostSeenTrainings />
-      </section>
-    </>
+    <section className="flex flex-col">
+      <Hero />
+      <NextTrainings />
+      <TopCategories />
+      <WhyChooseUs />
+      <MostSeenTrainings />
+      <HowItWorks />
+      <Testimonial />
+    </section>
   );
 };
 

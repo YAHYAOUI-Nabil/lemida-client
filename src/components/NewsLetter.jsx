@@ -9,7 +9,7 @@ const NewsLetter = () => {
   };
 
   return (
-    <section className="sm:px[282px] px-mobile_padding lg:py-[34px] max-lg:pt-[151px] max-lg:pb-[32px] bg-[#F6F6F6] relative">
+    <section className="sm:px[282px] px-mobile_padding py-[34px] max-lg:pb-[32px] bg-[#F6F6F6] relative">
       <div className="flex flex-col gap-4 items-center py-5">
         <div className="flex flex-col items-center">
           <p className="md:text-2xl text-lg md:leading-[46px] leading-[37px] font-semibold text-center">
