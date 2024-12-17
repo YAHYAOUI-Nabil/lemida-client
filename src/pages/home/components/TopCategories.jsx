@@ -42,7 +42,7 @@ const TopCategories = () => {
           disabled={isAtStart}
           className={`${
             isAtStart ? "bg-white/50" : "bg-white"
-          } flex opacity-0 translate-x-[-50%] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500  absolute left-0 z-10 w-10 h-20 items-center justify-center rounded-tr rounded-br`}
+          } sm:flex hidden opacity-0 translate-x-[-50%] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500  absolute left-0 z-10 w-10 h-20 items-center justify-center rounded-tr rounded-br`}
         >
           <FaChevronLeft className="text-black w-5 h-5" />
         </button>
@@ -51,7 +51,7 @@ const TopCategories = () => {
           disabled={isAtEnd}
           className={`${
             isAtEnd ? "bg-white/50" : "bg-white"
-          } flex opacity-0 translate-x-[50%] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500  absolute right-0 z-10 w-10 h-20 items-center justify-center rounded-tl rounded-bl`}
+          } sm:flex hidden opacity-0 translate-x-[50%] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500  absolute right-0 z-10 w-10 h-20 items-center justify-center rounded-tl rounded-bl`}
         >
           <FaChevronRight className="text-black w-5 h-5" />
         </button>

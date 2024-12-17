@@ -12,8 +12,7 @@ const NextTrainings = () => {
         loop
         muted
       >
-        <source src="/videos/video1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
       <div
         data-aos="fade-left"

@@ -6,7 +6,7 @@ import { MdTimer, MdOutlineSupportAgent } from "react-icons/md";
 const Card = (props) => {
   const { imageUrl, title, duration, instructors } = props;
   return (
-    <section className="relative group flex flex-col h-[420px] bg-white overflow-hidden">
+    <section className="relative group flex flex-col h-[500px] bg-white overflow-hidden">
       <NavLink
         to="/categories/tech"
         className="w-full h-full p-5 absolute top-0 flex translate-y-full group-hover:translate-y-0 ease-in-out duration-1000 bg-gradient-to-r from-footer_background_color to-footer_background_color z-10 cursor-pointer"
