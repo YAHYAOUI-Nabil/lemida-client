@@ -1,4 +1,5 @@
 import Card from "./Card";
+import { trainings } from "../../../assets/data/trainings";
 
 const MostSeenTrainings = () => {
   return (
@@ -27,46 +28,15 @@ const MostSeenTrainings = () => {
         </div>
       </div>
       <div className="grid 2xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5">
-        <Card
-          imageUrl="https://www.natech-training.com/wp-content/uploads/elementor/thumbs/formation-qhse-21-10-2018-nxubf4tozw2avsps898g13nay8rqly4gqa6dqc7uck.jpg"
-          title="Health"
-          description="12-Blade Apple Cutter Slicer & Corer Kit with Fruit Forks"
-        />
-        <Card
-          imageUrl="https://detailquebec.com/wp-content/uploads/2020/06/formation_hygiene_salubrite.jpg"
-          title="Outdoors"
-          description="12-Blade Apple Cutter Slicer & Corer Kit with Fruit Forks"
-        />
-        <Card
-          imageUrl="https://www.natech-training.com/wp-content/uploads/elementor/thumbs/formation-qhse-21-10-2018-nxubf4tozw2avsps898g13nay8rqly4gqa6dqc7uck.jpg"
-          title="Health"
-          description="12-Blade Apple Cutter Slicer & Corer Kit with Fruit Forks"
-        />
-        <Card
-          imageUrl="https://detailquebec.com/wp-content/uploads/2020/06/formation_hygiene_salubrite.jpg"
-          title="Outdoors"
-          description="12-Blade Apple Cutter Slicer & Corer Kit with Fruit Forks"
-        />
-        <Card
-          imageUrl="https://detailquebec.com/wp-content/uploads/2020/06/formation_hygiene_salubrite.jpg"
-          title="Outdoors"
-          description="12-Blade Apple Cutter Slicer & Corer Kit with Fruit Forks"
-        />
-        <Card
-          imageUrl="https://detailquebec.com/wp-content/uploads/2020/06/formation_hygiene_salubrite.jpg"
-          title="Outdoors"
-          description="12-Blade Apple Cutter Slicer & Corer Kit with Fruit Forks"
-        />
-        <Card
-          imageUrl="https://action-conseil-formation.com/wp-content/uploads/2023/11/Formation-hygiene-alimentaire-ACF-ROFHYA.jpg"
-          title="High-Tech"
-          description="12-Blade Apple Cutter Slicer & Corer Kit with Fruit Forks"
-        />
-        <Card
-          imageUrl="https://rhreflex.com/wp-content/uploads/2024/04/BREAKING-NEWS-900-x-600-px.png"
-          title="Sport"
-          description="12-Blade Apple Cutter Slicer & Corer Kit with Fruit Forks"
-        />
+        {trainings.map((training) => (
+          <Card
+            key={training.id}
+            imageUrl={training.image}
+            title={training.title}
+            instructors={training.instructors}
+            duration={training.duration}
+          />
+        ))}
       </div>
     </section>
   );

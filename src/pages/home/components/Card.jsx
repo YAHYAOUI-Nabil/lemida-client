@@ -1,16 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaEuroSign, FaChalkboardTeacher } from "react-icons/fa";
+import { MdTimer, MdOutlineSupportAgent } from "react-icons/md";
 
 const Card = (props) => {
-  const { imageUrl, title, description } = props;
+  const { imageUrl, title, duration, instructors } = props;
   return (
-    <section className="relative group flex flex-col h-[380px] bg-white overflow-hidden">
+    <section className="relative group flex flex-col h-[420px] bg-white overflow-hidden">
       <NavLink
         to="/categories/tech"
-        className="w-full h-full px-5 absolute top-0 translate-y-full group-hover:translate-y-0 ease-in-out duration-1000 bg-gradient-to-r from-footer_background_color to-footer_background_color z-50 cursor-pointer"
+        className="w-full h-full p-5 absolute top-0 flex translate-y-full group-hover:translate-y-0 ease-in-out duration-1000 bg-gradient-to-r from-footer_background_color to-footer_background_color z-10 cursor-pointer"
       >
-        <div className="relative flex flex-col justify-end-end">
-          <div className="absolute top-10 right-0 z-20">
+        <div className="relative flex flex-col gap-10 justify-end">
+          <div className="absolute top-0 right-0 z-20">
             <div>
               <svg
                 width="43"
@@ -81,31 +83,44 @@ const Card = (props) => {
               </svg>
             </div>
           </div>
-          <div className="h-[72px] mt-10 flex items-end -translate-y-full group-hover:translate-y-0 ease-in-out duration-1000">
-            <p className="text-[#E8E8E8] text-sm font-semibold">{title}</p>
+          <div className="flex items-end -translate-y-full group-hover:translate-y-0 ease-in-out duration-1000">
+            <p className="text-[#E8E8E8] text-lg font-bold">{title}</p>
           </div>
-          <div className="">
-            <p className="text-white text-[26px] font-semibold">
-              {description}
-            </p>
+          <div className="flex flex-col gap-4 justify-between mb-3 text-white">
+            <div className="flex flex-row gap-2 items-center">
+              <FaEuroSign className="w-5 h-5 text-white" />
+              <span className="font-medium">100% financé par DPC</span>
+            </div>
+            <div className="flex flex-row gap-2 items-center">
+              <MdTimer className="w-5 h-5 text-white" />
+              <span className="font-medium">
+                Durée : <span>{duration}</span>
+              </span>
+            </div>
+            <div className="flex flex-row gap-2 items-center">
+              <MdOutlineSupportAgent className="w-5 h-5 text-white" />
+              <p className="font-medium">En ligne</p>
+            </div>
+            <div className="flex flex-row gap-2">
+              <FaChalkboardTeacher className="w-5 h-5 text-white" />
+              <p className="font-medium">
+                Formateurs : <span>{instructors}</span>
+              </p>
+            </div>
           </div>
         </div>
       </NavLink>
-      <div className="flex flex-col h-[380px] bg-white border-[3px] border-[#F6F6F6] overflow-hidden">
-        <div className="w-full h-[277px] relative">
+      <div className="relative flex flex-col h-full bg-white border-[3px] border-[#F6F6F6] overflow-hidden cursor-pointer">
+        <div className="w-full h-full relative">
           <img
-            className="w-full h-[277px] object-cover"
+            className="w-full h-full object-cover"
             src={imageUrl}
             alt="Example product"
           />
         </div>
-        <div className="p-4 bg-[#F6F6F6] flex-grow translate-y-0 group-hover:-translate-y-[277px] transition-all ease-in-out duration-[950ms]">
-          <p className="text-transparent bg-clip-text bg-gradient-to-r from-footer_background_color to-footer_background_color font-semibold text-xs uppercase">
+        <div className="absolute bottom-0 w-full h-16 p-2 bg-[#F6F6F6] flex-grow translate-y-0 group-hover:-translate-y-[277px] transition-all ease-in-out duration-[950ms]">
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-footer_background_color to-footer_background_color font-bold text-lg line-clamp-2">
             {title}
-          </p>
-          <div className="w-5 border border-[#D1827B]" />
-          <p className="h-16 font-medium text-sm leading-[18px] overflow-ellipsis">
-            {description}
           </p>
         </div>
       </div>

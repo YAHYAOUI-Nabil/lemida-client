@@ -5,7 +5,7 @@ import { MdTimer, MdOutlineSupportAgent } from "react-icons/md";
 
 const NextTrainings = () => {
   return (
-    <section className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+    <section className="relative flex items-center justify-center h-screen overflow-hidden">
       <video
         className="absolute w-auto min-w-full min-h-full max-w-none object-cover outline-none"
         autoPlay
@@ -28,17 +28,17 @@ const NextTrainings = () => {
               Formation Facteurs de risques cardiovasculaires
             </NavLink>
             <div className="flex flex-col gap-4 justify-between mb-3 text-white">
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row gap-2 items-center">
                 <FaEuroSign className="w-5 h-5 text-white" />
                 <span className="font-medium">100% financé par DPC</span>
               </div>
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row gap-2 items-center">
                 <MdTimer className="w-5 h-5 text-white" />
                 <span className="font-medium">
                   Durée : <span>15h</span>
                 </span>
               </div>
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row gap-2 items-center">
                 <MdOutlineSupportAgent className="w-5 h-5 text-white" />
                 <p className="font-medium">En ligne</p>
               </div>

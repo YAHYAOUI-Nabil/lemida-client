@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAppContext } from "../app/context/AppContext";
+import { MdOutlineAccountCircle, MdSearch, MdMenu } from "react-icons/md";
 import logo from "../assets/images/Lemida-logo.png";
 
 const Header = () => {
@@ -25,51 +26,31 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-[999] md:px-desktop_padding sm:px-tablet_padding px-mobile_padding h-16 flex flex-row items-center justify-between w-full bg-header_background_color text-header_text_color shadow-headerShadow">
       <div className="max-lg:w-full max-lg:flex max-lg:justify-between max-lg:items-center">
-        <div className="py-[17px] w-[139px]">
+        <div className="py-[17px] w-[139px] flex items-center gap-4">
+          <button
+            className="lg:hidden flex"
+            onClick={() => setActiveMenu(!activeMenu)}
+          >
+            <MdMenu className="w-8 h-8 text-[#141414]" />
+          </button>
           <NavLink>
             <img className="h-10 w-auto" src={logo} alt="Lemida" />
           </NavLink>
         </div>
-        <div className="lg:hidden flex gap-8">
+        <div className="lg:hidden flex gap-4">
+          <NavLink to="/connexion">
+            <MdOutlineAccountCircle className="w-8 h-8 text-[#141414]" />
+          </NavLink>
           <button
             className="cursor-pointer"
             onClick={() => setOpenSearchMenu(!openSearchMenu)}
           >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M22.4379 21.1015L15.7292 14.3928C16.7703 13.0469 17.3334 11.4014 17.3334 9.67062C17.3334 7.59886 16.5249 5.65626 15.0628 4.19157C13.6006 2.72687 11.6529 1.9209 9.58371 1.9209C7.51453 1.9209 5.56677 2.72945 4.10465 4.19157C2.63996 5.65368 1.83398 7.59886 1.83398 9.67062C1.83398 11.7398 2.64254 13.6876 4.10465 15.1497C5.56677 16.6144 7.51195 17.4203 9.58371 17.4203C11.3145 17.4203 12.9574 16.8572 14.3033 15.8187L21.012 22.5248C21.0316 22.5445 21.055 22.5601 21.0807 22.5708C21.1064 22.5814 21.134 22.5869 21.1618 22.5869C21.1896 22.5869 21.2172 22.5814 21.2429 22.5708C21.2686 22.5601 21.2919 22.5445 21.3116 22.5248L22.4379 21.4011C22.4576 21.3814 22.4732 21.3581 22.4839 21.3324C22.4945 21.3067 22.5 21.2791 22.5 21.2513C22.5 21.2235 22.4945 21.1959 22.4839 21.1702C22.4732 21.1445 22.4576 21.1211 22.4379 21.1015ZM13.6756 13.7625C12.5803 14.8552 11.1285 15.4571 9.58371 15.4571C8.03893 15.4571 6.58715 14.8552 5.49185 13.7625C4.39914 12.6672 3.79725 11.2154 3.79725 9.67062C3.79725 8.12584 4.39914 6.67148 5.49185 5.57877C6.58715 4.48606 8.03893 3.88416 9.58371 3.88416C11.1285 3.88416 12.5828 4.48347 13.6756 5.57877C14.7683 6.67406 15.3702 8.12584 15.3702 9.67062C15.3702 11.2154 14.7683 12.6698 13.6756 13.7625Z"
-                fill="#141414"
-              />
-            </svg>
-          </button>
-          <button
-            className="cursor-pointer"
-            onClick={() => setActiveMenu(!activeMenu)}
-          >
-            <svg
-              width="25"
-              height="24"
-              viewBox="0 0 25 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M22.9994 2.56653H1.99944C1.88158 2.56653 1.78516 2.66296 1.78516 2.78081V4.4951C1.78516 4.61296 1.88158 4.70939 1.99944 4.70939H22.9994C23.1173 4.70939 23.2137 4.61296 23.2137 4.4951V2.78081C23.2137 2.66296 23.1173 2.56653 22.9994 2.56653ZM22.9994 19.2808H1.99944C1.88158 19.2808 1.78516 19.3772 1.78516 19.4951V21.2094C1.78516 21.3272 1.88158 21.4237 1.99944 21.4237H22.9994C23.1173 21.4237 23.2137 21.3272 23.2137 21.2094V19.4951C23.2137 19.3772 23.1173 19.2808 22.9994 19.2808ZM22.9994 10.9237H1.99944C1.88158 10.9237 1.78516 11.0201 1.78516 11.138V12.8522C1.78516 12.9701 1.88158 13.0665 1.99944 13.0665H22.9994C23.1173 13.0665 23.2137 12.9701 23.2137 12.8522V11.138C23.2137 11.0201 23.1173 10.9237 22.9994 10.9237Z"
-                fill="black"
-                fillOpacity="0.85"
-              />
-            </svg>
+            <MdSearch className="w-8 h-8 text-[#141414]" />
           </button>
         </div>
       </div>
 
-      <div className="lg:flex hidden justify-end items-center gap-10 w-full h-full text-base font-normal leading-[22px]">
+      <div className="lg:flex hidden justify-end items-center xl:gap-10 gap-7 w-full h-full text-base font-normal leading-[22px]">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -96,7 +77,7 @@ const Header = () => {
         >
           Formations
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/a-propos"
           className={({ isActive }) =>
             [
@@ -108,7 +89,7 @@ const Header = () => {
           }
         >
           À propos
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="/contact"
           className={({ isActive }) =>
@@ -123,7 +104,7 @@ const Header = () => {
           Contactez-nous
         </NavLink>
         <NavLink
-          to="/login"
+          to="/connexion"
           className="flex items-center justify-center rounded-full text-white font-medium md:text-base text-xs px-4 py-2 bg-gradient-to-r from-[#5869d4] to-[#2234a8] transition-all ease-in-out duration-500"
         >
           Connexion

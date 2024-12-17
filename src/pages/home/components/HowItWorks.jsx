@@ -7,7 +7,7 @@ import {
 
 const HowItWorks = () => {
   return (
-    <section className="flex items-center justify-center md:px-desktop_padding sm:px-tablet_padding px-mobile_padding mb-16">
+    <div className="flex items-center justify-center md:px-desktop_padding sm:px-tablet_padding px-mobile_padding mb-16">
       <div className="flex flex-col gap-10 max-w-[1635px] max-lg:gap-6">
         <div className="flex flex-col items-center md:px-[80px] px-5 gap-[14px]">
           <p className="text-center font-bold md:text-3xl text-xl flex items-center">
@@ -60,7 +60,7 @@ const HowItWorks = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

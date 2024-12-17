@@ -5,10 +5,7 @@ const WhyChooseUs = () => {
   return (
     <div className="bg-white mb-16 w-full">
       <div className="md:px-desktop_padding sm:px-tablet_padding px-mobile_padding">
-        <div
-          data-aos="fade-up"
-          className="flex flex-col items-center text-center"
-        >
+        <div className="flex flex-col items-center text-center">
           <p className="mt-2 font-bold md:text-3xl text-xl">
             Nos Engagements pour Votre Réussite
           </p>
@@ -24,13 +21,12 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="md:mt-20 mt-10 w-full">
-          <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
+        <div className="md:mt-16 mt-8 w-full">
+          <div className="grid grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
             {features.map((feature, index) => (
               <div
                 key={feature.name}
-                data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-                className="relative flex flex-col max-sm:items-center gap-6 sm:flex-row md:flex-col lg:flex-row"
+                className="relative flex flex-col items-center lg:gap-6 md:gap-4 sm:gap-6 gap-2 sm:flex-row sm:items-start md:flex-col md:items-center lg:flex-row lg:items-start"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl text-main_color sm:shrink-0">
                   <feature.icon className="h-8 w-8" />
