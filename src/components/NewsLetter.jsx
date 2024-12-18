@@ -31,7 +31,7 @@ const NewsLetter = () => {
             />
             <button
               type="submit"
-              className="w-full h-[58px] px-[15px] py-1.5 rounded-[30px] bg-footer_background_color hover:bg-[#20C997] transition-all duration-500 ease-in-out font-medium text-white"
+              className="w-full h-[58px] px-[15px] py-1.5 rounded-full bg-footer_background_color hover:bg-[#20C997] transition-all duration-500 ease-in-out font-medium text-white"
             >
               S'inscrire
             </button>
