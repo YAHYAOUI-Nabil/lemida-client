@@ -14,7 +14,7 @@ const ContactUsForm = () => {
             id="name"
             name="name"
             className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            placeholder="Your Name"
+            placeholder="Entrez votre Nom et Prénom"
             required
           />
         </div>
@@ -27,7 +27,7 @@ const ContactUsForm = () => {
             id="email"
             name="email"
             className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            placeholder="Your Email"
+            placeholder="Entrez votre Email"
             required
           />
         </div>
@@ -40,7 +40,7 @@ const ContactUsForm = () => {
             id="tel"
             name="tel"
             className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            placeholder="Your Phone"
+            placeholder="Entrer votre numéro de téléphone"
             required
           />
         </div>
@@ -53,7 +53,7 @@ const ContactUsForm = () => {
             name="message"
             rows="5"
             className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            placeholder="Your Message"
+            placeholder="Votre Message"
             required
           ></textarea>
         </div>
