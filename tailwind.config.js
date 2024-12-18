@@ -56,6 +56,11 @@ module.exports = {
             display: "none",
           },
         },
+        ".bg-squares": {
+          "background-image":
+            "linear-gradient(to right, #fff 1px, transparent 1px)",
+          "background-size": "20px 20px",
+        },
       });
     }),
   ],
