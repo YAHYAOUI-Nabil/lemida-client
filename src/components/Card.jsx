@@ -6,12 +6,12 @@ import { MdTimer, MdOutlineSupportAgent } from "react-icons/md";
 const Card = (props) => {
   const { imageUrl, title, duration, instructors } = props;
   return (
-    <section className="relative group flex flex-col h-[500px] bg-white overflow-hidden">
+    <section className="relative group flex flex-col h-[460px] bg-white overflow-hidden">
       <NavLink
-        to="/categories/tech"
+        to="/formations"
         className="w-full h-full p-5 absolute top-0 flex translate-y-full group-hover:translate-y-0 ease-in-out duration-1000 bg-gradient-to-r from-footer_background_color to-footer_background_color z-10 cursor-pointer"
       >
-        <div className="relative flex flex-col gap-10 justify-end">
+        <div className="relative flex flex-col gap-10 justify-end w-full">
           <div className="absolute top-0 right-0 z-20">
             <div>
               <svg
@@ -118,7 +118,7 @@ const Card = (props) => {
             alt="Example product"
           />
         </div>
-        <div className="absolute bottom-0 w-full h-16 p-2 bg-[#F6F6F6] flex-grow translate-y-0 group-hover:-translate-y-[277px] transition-all ease-in-out duration-[950ms]">
+        <div className="absolute bottom-0 w-full h-20 p-3 bg-[#F6F6F6] flex-grow translate-y-0 group-hover:-translate-y-[277px] transition-all ease-in-out duration-[950ms]">
           <p className="text-transparent bg-clip-text bg-gradient-to-r from-footer_background_color to-footer_background_color font-bold text-lg line-clamp-2">
             {title}
           </p>

@@ -18,7 +18,7 @@ const Hero = () => {
         </p>
         <NavLink
           to="/formations"
-          className="flex items-center justify-center rounded-full text-white font-medium md:text-base text-xs px-10 py-4 bg-gradient-to-r from-[#5869d4] to-[#2234a8] hover:bg-bgFrom hover:scale-105 transition-all ease-in-out duration-500"
+          className="flex items-center justify-center rounded-full text-white font-medium md:text-base text-xs px-10 py-4 bg-[#5869d4] hover:bg-[#20C997] transition-all ease-in-out duration-500"
         >
           Notre catalogue
         </NavLink>

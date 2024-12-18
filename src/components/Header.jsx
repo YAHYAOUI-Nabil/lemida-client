@@ -77,19 +77,6 @@ const Header = () => {
         >
           Formations
         </NavLink>
-        {/* <NavLink
-          to="/a-propos"
-          className={({ isActive }) =>
-            [
-              isActive
-                ? "text-nav_focus_color border-b-2 border-nav_focus_color"
-                : "text-nav_color/85 border-b-2 border-transparent",
-              "w-fit h-full flex items-center",
-            ].join(" ")
-          }
-        >
-          À propos
-        </NavLink> */}
         <NavLink
           to="/contact"
           className={({ isActive }) =>
@@ -105,7 +92,7 @@ const Header = () => {
         </NavLink>
         <NavLink
           to="/connexion"
-          className="flex items-center justify-center rounded-full text-white font-medium md:text-base text-xs px-4 py-2 bg-gradient-to-r from-[#5869d4] to-[#2234a8] transition-all ease-in-out duration-500"
+          className="flex items-center justify-center rounded-full text-white font-medium md:text-base text-xs px-4 py-2 bg-[#5869d4] hover:bg-[#20C997] transition-all ease-in-out duration-500"
         >
           Connexion
         </NavLink>

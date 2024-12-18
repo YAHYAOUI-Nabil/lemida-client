@@ -19,7 +19,7 @@ const NextTrainings = () => {
         className="absolute md:right-10 max-sm:mx-auto bottom-[25%] px-6 lg:px-8 max-sm:flex max-sm:justify-center max-sm:items-center max-sm:w-full"
       >
         <div className="mx-auto md:max-w-96 max-w-80 flex flex-col gap-20">
-          <div className="group flex flex-col gap-4 border-main_color rounded-xl p-4 cursor-pointer transition-transform ease-in-out duration-300 transform hover:scale-[1.03]">
+          <div className="group flex flex-col gap-4 p-4 cursor-pointer transition-transform ease-in-out duration-300 transform hover:scale-[1.03]">
             <NavLink
               to="/"
               className="text-2xl font-semibold mb-2 text-white text-left"

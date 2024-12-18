@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../../../components/Card";
 import { trainings } from "../../../assets/data/trainings";
 
 const MostSeenTrainings = () => {
@@ -27,7 +27,7 @@ const MostSeenTrainings = () => {
           </svg>
         </div>
       </div>
-      <div className="grid 2xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5">
+      <div className="grid 2xl:grid-cols-6 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
         {trainings.map((training) => (
           <Card
             key={training.id}
