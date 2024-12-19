@@ -33,7 +33,7 @@ const Header = () => {
           >
             <MdMenu className="w-8 h-8 text-[#141414]" />
           </button>
-          <NavLink>
+          <NavLink to="/">
             <img className="h-10 w-auto" src={logo} alt="Lemida" />
           </NavLink>
         </div>
@@ -91,7 +91,7 @@ const Header = () => {
           Contactez-nous
         </NavLink>
         <NavLink
-          to="/connexion"
+          to="/connexion/login"
           className="flex items-center justify-center rounded-full text-white font-medium md:text-base text-xs px-4 py-2 bg-[#5869d4] hover:bg-[#20C997] transition-all ease-in-out duration-500"
         >
           Connexion

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { faq } from "../../assets/data/faq";
+import { faq } from "../../../assets/data/faq";
 
 const Item = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
