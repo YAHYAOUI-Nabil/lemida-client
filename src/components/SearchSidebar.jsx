@@ -10,7 +10,7 @@ const SearchSidebar = () => {
 
   const handleKeyPress = (e) => {
     if (searchQuery.trim() !== "" && e.key === "Enter") {
-      navigate(`/search/${searchQuery}`);
+      navigate(`/recherches/formations/?search=${searchQuery}`);
       setSearchQuery("");
       setOpenSearchMenu(!openSearchMenu);
     }
@@ -25,7 +25,7 @@ const SearchSidebar = () => {
   };
 
   const handleSearchItems = (key) => {
-    navigate(`/recherches/formations/?search=${searchQuery}`);
+    navigate(`/recherches/formations/?search=${key}`);
     setSearchQuery("");
     setOpenSearchMenu(!openSearchMenu);
   };
