@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <footer className="w-full px-mobile_padding sm:px-tablet_padding md:px-desktop_padding bg-footer_background_color text-footer_text_color">
       <div className="grid gap-16 md:py-16 py-8 lg:grid-cols-6">
-        <div className="md:max-w-md lg:col-span-2">
-          <NavLink>
+        <div className="md:max-w-md lg:col-span-2 flex flex-col gap-4">
+          <NavLink to="/">
             <img className="h-16 w-auto" src={logo} alt="Lemida" />
           </NavLink>
 
@@ -18,6 +18,22 @@ const Footer = () => {
             <p className="text-sm font-medium">
               Découvrez nos formations et développez vos compétences dès
               aujourd'hui.
+            </p>
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="w-40">
+              <img
+                src="/images/qualiopi.png"
+                alt="qualiopi"
+                className="object-fill h-auto w-full bg-white"
+              />
+            </div>
+            <p className="text-[10px]">
+              La certification qualité a été délivrée au titre de la catégorie
+              d'action suivante :{" "}
+              <span className="font-semibold text-gray-200">
+                Actions de formation
+              </span>
             </p>
           </div>
         </div>
