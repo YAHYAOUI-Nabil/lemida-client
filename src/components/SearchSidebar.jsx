@@ -18,14 +18,14 @@ const SearchSidebar = () => {
 
   const handleSearch = () => {
     if (searchQuery.trim() !== "") {
-      navigate(`/search/${searchQuery}`);
+      navigate(`/recherches/formations/?search=${searchQuery}`);
       setSearchQuery("");
       setOpenSearchMenu(!openSearchMenu);
     }
   };
 
   const handleSearchItems = (key) => {
-    navigate(`/search/${key}`);
+    navigate(`/recherches/formations/?search=${searchQuery}`);
     setSearchQuery("");
     setOpenSearchMenu(!openSearchMenu);
   };

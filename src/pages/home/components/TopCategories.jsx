@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { categories } from "../../../assets/data/categories";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const TopCategories = () => {
   const scrollContainerRef = useRef(null);
@@ -62,7 +63,8 @@ const TopCategories = () => {
           >
             {categories.map((category) => {
               return (
-                <div
+                <NavLink
+                  to={`/recherches/formations/?categorie=${category.name}`}
                   key={category.name}
                   className="relative flex items-center justify-center w-52 min-w-52 h-52 rounded-full bg-[#20C997] cursor-pointer"
                 >
@@ -74,7 +76,7 @@ const TopCategories = () => {
                       {category.name}
                     </p>
                   </div>
-                </div>
+                </NavLink>
               );
             })}
           </div>

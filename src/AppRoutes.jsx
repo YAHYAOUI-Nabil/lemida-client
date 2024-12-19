@@ -4,6 +4,8 @@ import LoadingSpinner from "./components/LoadingSpinner";
 
 const Home = React.lazy(() => import("./pages/home"));
 const Trainings = React.lazy(() => import("./pages/trainings"));
+const SearchTrainings = React.lazy(() => import("./pages/searchTrainings"));
+const TrainingDetails = React.lazy(() => import("./pages/trainingDetails"));
 const Contact = React.lazy(() => import("./pages/contact"));
 const About = React.lazy(() => import("./pages/about"));
 const LegalNotices = React.lazy(() => import("./pages/legalNotices"));
@@ -26,6 +28,22 @@ const AppRoutes = () => {
         element={
           <React.Suspense fallback={<LoadingSpinner />}>
             <Trainings />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/recherches/formations"
+        element={
+          <React.Suspense fallback={<LoadingSpinner />}>
+            <SearchTrainings />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/formations/:id"
+        element={
+          <React.Suspense fallback={<LoadingSpinner />}>
+            <TrainingDetails />
           </React.Suspense>
         }
       />

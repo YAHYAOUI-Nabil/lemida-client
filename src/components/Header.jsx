@@ -12,14 +12,14 @@ const Header = () => {
 
   const handleKeyPress = (e) => {
     if (searchQuery.trim() !== "" && e.key === "Enter") {
-      navigate(`/search/${searchQuery}`);
+      navigate(`/recherches/formations/?search=${searchQuery}`);
       setSearchQuery("");
     }
   };
 
   const handleSearch = () => {
     if (searchQuery.trim() !== "") {
-      navigate(`/search/${searchQuery}`);
+      navigate(`/recherches/formations/?search=${searchQuery}`);
       setSearchQuery("");
     }
   };

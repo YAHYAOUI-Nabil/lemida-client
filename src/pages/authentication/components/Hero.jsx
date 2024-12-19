@@ -4,11 +4,7 @@ const Hero = () => {
   return (
     <div className="lg:flex hidden relative justify-center items-center text-white p-6">
       <div className="absolute top-6 left-6 z-20">
-        <img
-          className="h-10 w-auto"
-          src="/images/lemida-logo.jpg"
-          alt="Lemida"
-        />
+        <img src="/images/auth-logo.jpg" alt="Lemida" className="h-10 w-auto" />
       </div>
       <div className="absolute inset-0 pointer-events-none w-full h-full">
         <img

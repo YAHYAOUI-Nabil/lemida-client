@@ -8,7 +8,7 @@ const Card = (props) => {
   return (
     <section className="relative group flex flex-col h-[460px] bg-white overflow-hidden">
       <NavLink
-        to="/formations"
+        to="/formations/1254"
         className="w-full h-full p-5 absolute top-0 flex translate-y-full group-hover:translate-y-0 ease-in-out duration-1000 bg-gradient-to-r from-footer_background_color to-footer_background_color z-10 cursor-pointer"
       >
         <div className="relative flex flex-col gap-10 justify-end w-full">

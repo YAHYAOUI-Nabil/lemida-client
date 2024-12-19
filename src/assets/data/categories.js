@@ -32,7 +32,7 @@ export const categories = [
     icon: GiMorgueFeet,
   },
   {
-    name: "Médeciens généralistes",
+    name: "Médecins généralistes",
     icon: LiaStethoscopeSolid,
   },
   {
