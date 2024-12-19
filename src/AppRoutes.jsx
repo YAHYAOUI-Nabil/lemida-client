@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 const Home = React.lazy(() => import("./pages/home"));
 const Trainings = React.lazy(() => import("./pages/trainings"));
@@ -12,16 +13,62 @@ const TermsOfUse = React.lazy(() => import("./pages/termsAndConditionsOfUse"));
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route index element={<Home />} />
-      <Route path="/formations" element={<Trainings />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/a-propos" element={<About />} />
-      <Route path="/mentions-legales" element={<LegalNotices />} />
+      <Route
+        index
+        element={
+          <React.Suspense fallback={<LoadingSpinner />}>
+            <Home />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/formations"
+        element={
+          <React.Suspense fallback={<LoadingSpinner />}>
+            <Trainings />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <React.Suspense fallback={<LoadingSpinner />}>
+            <Contact />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/a-propos"
+        element={
+          <React.Suspense fallback={<LoadingSpinner />}>
+            <About />
+          </React.Suspense>
+        }
+      />
+      <Route
+        path="/mentions-legales"
+        element={
+          <React.Suspense fallback={<LoadingSpinner />}>
+            <LegalNotices />
+          </React.Suspense>
+        }
+      />
       <Route
         path="/politiques-de-confidentialite"
-        element={<PrivacyPolicy />}
+        element={
+          <React.Suspense fallback={<LoadingSpinner />}>
+            <PrivacyPolicy />
+          </React.Suspense>
+        }
       />
-      <Route path="/conditions-generales" element={<TermsOfUse />} />
+      <Route
+        path="/conditions-generales"
+        element={
+          <React.Suspense fallback={<LoadingSpinner />}>
+            <TermsOfUse />
+          </React.Suspense>
+        }
+      />
     </Routes>
   );
 };

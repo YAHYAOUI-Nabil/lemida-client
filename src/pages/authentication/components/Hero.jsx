@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="absolute top-6 left-6 z-20">
         <img
           className="h-10 w-auto"
-          src="/images/lemida-logo.png"
+          src="/images/lemida-logo.jpg"
           alt="Lemida"
         />
       </div>
