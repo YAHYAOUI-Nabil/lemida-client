@@ -40,19 +40,19 @@ const TrainingDetails = () => {
         } else {
           setIsReached(false);
         }
-        if (rectDescription.top <= 180) {
+        if (rectDescription.top <= 220) {
           setToggleResults("Description");
         }
-        if (rectSkills.top <= 180) {
+        if (rectSkills.top <= 220) {
           setToggleResults("Compétences développées");
         }
-        if (rectProgram.top <= 180) {
+        if (rectProgram.top <= 220) {
           setToggleResults("Programmes");
         }
-        if (rectAids.top <= 180) {
+        if (rectAids.top <= 220) {
           setToggleResults("Financements");
         }
-        if (rectTestimonials.top <= 180) {
+        if (rectTestimonials.top <= 220) {
           setToggleResults("Témoignages");
         }
       }
