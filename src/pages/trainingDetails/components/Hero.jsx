@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hero = () => {
+const Hero = ({ setShowInscriptionForm }) => {
   return (
     <div className="relative flex h-full w-full py-12 md:px-desktop_padding sm:px-tablet_padding px-mobile_padding md:bg-[#d6e0f5]/50 bg-[#d6e0f5]">
       <div className="flex flex-col gap-4 max-w-3xl">
@@ -31,8 +31,11 @@ const Hero = () => {
             Formateur : <span className="underline">Jim Sullivan</span>
           </p>
         </div>
-        <div className="w-fit bg-main_color text-white hover:bg-blue-900 transition-all duration-500 ease-in-out">
-          <button className="px-10 py-5 text-base font-semibold">
+        <div className="flex items-center justify-center w-fit bg-main_color text-white hover:bg-blue-900 transition-all duration-500 ease-in-out">
+          <button
+            className="px-10 py-5 text-base font-semibold"
+            onClick={() => setShowInscriptionForm(true)}
+          >
             S'inscrire
           </button>
         </div>

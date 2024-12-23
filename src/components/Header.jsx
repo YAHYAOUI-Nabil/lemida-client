@@ -33,8 +33,12 @@ const Header = () => {
           >
             <MdMenu className="w-8 h-8 text-[#141414]" />
           </button>
-          <NavLink to="/">
-            <img className="h-10 w-auto" src={logo} alt="Lemida" />
+          <NavLink to="/" className="">
+            <img
+              className="h-10 w-auto"
+              src="/images/logo_lemida.png"
+              alt="Lemida"
+            />
           </NavLink>
         </div>
         <div className="lg:hidden flex gap-4">

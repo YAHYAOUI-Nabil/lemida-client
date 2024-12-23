@@ -11,7 +11,11 @@ const Footer = () => {
       <div className="grid gap-16 md:py-16 py-8 lg:grid-cols-6">
         <div className="md:max-w-md lg:col-span-2 flex flex-col gap-4">
           <NavLink to="/">
-            <img className="h-16 w-auto" src={logo} alt="Lemida" />
+            <img
+              className="w-40 bg-white"
+              src="/images/logo_lemida.png"
+              alt="Lemida"
+            />
           </NavLink>
 
           <div className="mt-4 lg:max-w-sm">
@@ -131,8 +135,7 @@ const Footer = () => {
       </div>
       <div className="flex sm:flex-row flex-col sm:justify-between items-center py-2 border-t">
         <p className="text-sm font-medium pl-1">
-          <span className="text-xl font-bold mr-2">Lemida</span> &copy;{" "}
-          {currentDate} LNR Finance.
+          &copy; {currentDate} LNR Finance.
         </p>
         <div className="flex items-center mt-4 space-x-4 sm:mt-0 pl-1 sm:pl-0 sm:pr-1">
           <a

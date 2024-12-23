@@ -39,9 +39,9 @@ const Main = () => {
                 <path
                   d="M14.75 8.375L8 1.625L1.25 8.375"
                   stroke="#1E1E1E"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             ) : (
@@ -55,9 +55,9 @@ const Main = () => {
                 <path
                   d="M1.25 1.625L8 8.375L14.75 1.625"
                   stroke="#1E1E1E"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             )}
