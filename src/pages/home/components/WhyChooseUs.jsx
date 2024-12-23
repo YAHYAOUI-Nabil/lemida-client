@@ -3,13 +3,13 @@ import { features } from "../../../assets/data/features";
 
 const WhyChooseUs = () => {
   return (
-    <div className="bg-white mb-16 w-full">
+    <div className="bg-gray-100 mb-16 w-full py-16">
       <div className="md:px-desktop_padding sm:px-tablet_padding px-mobile_padding">
         <div className="flex flex-col items-center text-center">
           <p className="mt-2 font-bold md:text-3xl text-xl">
             Nos Engagements pour Votre Réussite
           </p>
-          <p className="mt-6 md:max-w-4xl text-lg text-gray-600">
+          <p className="mt-6 md:max-w-5xl text-lg text-gray-600">
             Explorez ce qui fait la singularité de notre plateforme et pourquoi
             elle est choisie par des milliers d'apprenants pour atteindre leurs
             objectifs professionnels et personnels. Nous mettons à votre

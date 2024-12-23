@@ -12,14 +12,14 @@ const Header = () => {
 
   const handleKeyPress = (e) => {
     if (searchQuery.trim() !== "" && e.key === "Enter") {
-      navigate(`/recherches/formations/?search=${searchQuery}`);
+      navigate(`/formations/recherches?search=${searchQuery}`);
       setSearchQuery("");
     }
   };
 
   const handleSearch = () => {
     if (searchQuery.trim() !== "") {
-      navigate(`/recherches/formations/?search=${searchQuery}`);
+      navigate(`/formations/recherches?search=${searchQuery}`);
       setSearchQuery("");
     }
   };
@@ -110,7 +110,7 @@ const Header = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={handleKeyPress}
-              placeholder="chercher une formation..."
+              placeholder="formation, spécialité..."
               className="outline-none text-sm leading-[22px] font-normal"
             />
           </div>

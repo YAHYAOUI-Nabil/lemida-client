@@ -10,9 +10,9 @@ const Testimonials = () => {
         <div className="flex flex-col gap-2 border-2 border-gray-200 w-full rounded-lg p-4">
           <div className="flex flex-row items-center gap-4">
             <img
-              src="https://lh3.googleusercontent.com/pw/AL9nZEUn0_Z__2yT_aZpFawJ_vi0ycdjOQQc-wtvTw2elNrVmzC4A8t5GrUaVe8qafjQJoK2xG2eqZCpaQY0fY_yx6IJBEtMJSHgDzxQvdQExK9I04HMw8B5hfjKC4tA0rxBcfg0fvv-zNiG7LLOaAQIhUY=w926-h617-no?authuser=0"
+              src="https://media.istockphoto.com/id/1289461280/photo/healthcare-worker-portrait.jpg?s=612x612&w=0&k=20&c=rJDnJzrLxV6vpK8SFaau-A3_hMbccoEBQf8lFCfc9ZE="
               alt="formateur"
-              className="w-14 h-14 object-cover rounded-full"
+              className="w-16 h-16 object-cover rounded-full"
             />
             <div className="flex flex-col gap-1">
               <p className="underline">Jon Doe</p>
@@ -27,9 +27,9 @@ const Testimonials = () => {
         <div className="flex flex-col gap-2 border-2 border-gray-200 w-full rounded-lg p-4">
           <div className="flex flex-row items-center gap-4">
             <img
-              src="https://lh3.googleusercontent.com/pw/AL9nZEUn0_Z__2yT_aZpFawJ_vi0ycdjOQQc-wtvTw2elNrVmzC4A8t5GrUaVe8qafjQJoK2xG2eqZCpaQY0fY_yx6IJBEtMJSHgDzxQvdQExK9I04HMw8B5hfjKC4tA0rxBcfg0fvv-zNiG7LLOaAQIhUY=w926-h617-no?authuser=0"
+              src="https://media.istockphoto.com/id/1285872850/photo/close-up-portrait-of-young-female-doctor-wear-smiling-and-looking-at-camera.jpg?s=612x612&w=0&k=20&c=5clbDZW4GHOgECbiTrnuASjgVLKgwWp_7u-5eXpw6Cg="
               alt="formateur"
-              className="w-14 h-14 object-cover rounded-full"
+              className="w-16 h-16 object-cover rounded-full"
             />
             <div className="flex flex-col gap-1">
               <p className="underline">Jon Doe</p>
@@ -44,9 +44,9 @@ const Testimonials = () => {
         <div className="flex flex-col gap-2 border-2 border-gray-200 w-full rounded-lg p-4">
           <div className="flex flex-row items-center gap-4">
             <img
-              src="https://lh3.googleusercontent.com/pw/AL9nZEUn0_Z__2yT_aZpFawJ_vi0ycdjOQQc-wtvTw2elNrVmzC4A8t5GrUaVe8qafjQJoK2xG2eqZCpaQY0fY_yx6IJBEtMJSHgDzxQvdQExK9I04HMw8B5hfjKC4tA0rxBcfg0fvv-zNiG7LLOaAQIhUY=w926-h617-no?authuser=0"
+              src="https://img.freepik.com/premium-photo/closeup-photo-doctor-standing-hospital-world-doctors-day-with-generative-ai_455711-2177.jpg"
               alt="formateur"
-              className="w-14 h-14 object-cover rounded-full"
+              className="w-16 h-16 object-cover rounded-full"
             />
             <div className="flex flex-col gap-1">
               <p className="underline">Jon Doe</p>
@@ -61,9 +61,9 @@ const Testimonials = () => {
         <div className="flex flex-col gap-2 border-2 border-gray-200 w-full rounded-lg p-4">
           <div className="flex flex-row items-center gap-4">
             <img
-              src="https://lh3.googleusercontent.com/pw/AL9nZEUn0_Z__2yT_aZpFawJ_vi0ycdjOQQc-wtvTw2elNrVmzC4A8t5GrUaVe8qafjQJoK2xG2eqZCpaQY0fY_yx6IJBEtMJSHgDzxQvdQExK9I04HMw8B5hfjKC4tA0rxBcfg0fvv-zNiG7LLOaAQIhUY=w926-h617-no?authuser=0"
+              src="https://i.cbc.ca/1.6653992.1668632966!/fileImage/httpImage/image.jpg_gen/derivatives/original_1180/dr-zacharias.jpg?im="
               alt="formateur"
-              className="w-14 h-14 object-cover rounded-full"
+              className="w-16 h-16 object-cover rounded-full"
             />
             <div className="flex flex-col gap-1">
               <p className="underline">Jon Doe</p>

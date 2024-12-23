@@ -32,7 +32,7 @@ const AppRoutes = () => {
         }
       />
       <Route
-        path="/recherches/formations"
+        path="/formations/recherches"
         element={
           <React.Suspense fallback={<LoadingSpinner />}>
             <SearchTrainings />

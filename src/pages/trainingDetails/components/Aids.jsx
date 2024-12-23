@@ -15,7 +15,10 @@ const Aids = ({ setShowEligibilityForm }) => {
             at bibendum urna dolor sit amet diam.
           </p>
           <div className="flex w-full h-full items-center justify-center transition-all duration-500 ease-in-out">
-            <button className="px-8 py-2 bg-main_color text-white group-hover:text-main_color group-hover:bg-white border-2 border-gray-100 group-hover:border-main_color text-base font-medium rounded-full w-fit transition-all duration-300 ease-in-out">
+            <button
+              className="px-8 py-2 bg-main_color text-white group-hover:text-main_color group-hover:bg-white border-2 border-gray-100 group-hover:border-main_color text-base font-medium rounded-full w-fit transition-all duration-300 ease-in-out"
+              onClick={() => setShowEligibilityForm(true)}
+            >
               vérifier mon éligibilité
             </button>
           </div>
@@ -28,7 +31,10 @@ const Aids = ({ setShowEligibilityForm }) => {
             at bibendum urna dolor sit amet diam.
           </p>
           <div className="flex w-full h-full items-center justify-center transition-all duration-500 ease-in-out">
-            <button className="px-8 py-2 bg-main_color text-white group-hover:text-main_color group-hover:bg-white border-2 border-gray-100 group-hover:border-main_color text-base font-medium rounded-full w-fit transition-all duration-300 ease-in-out">
+            <button
+              className="px-8 py-2 bg-main_color text-white group-hover:text-main_color group-hover:bg-white border-2 border-gray-100 group-hover:border-main_color text-base font-medium rounded-full w-fit transition-all duration-300 ease-in-out"
+              onClick={() => setShowEligibilityForm(true)}
+            >
               vérifier mon éligibilité
             </button>
           </div>
@@ -41,7 +47,10 @@ const Aids = ({ setShowEligibilityForm }) => {
             at bibendum urna dolor sit amet diam.
           </p>
           <div className="flex w-full h-full items-center justify-center transition-all duration-500 ease-in-out">
-            <button className="px-8 py-2 bg-main_color text-white group-hover:text-main_color group-hover:bg-white border-2 border-gray-100 group-hover:border-main_color text-base font-medium rounded-full w-fit transition-all duration-300 ease-in-out">
+            <button
+              className="px-8 py-2 bg-main_color text-white group-hover:text-main_color group-hover:bg-white border-2 border-gray-100 group-hover:border-main_color text-base font-medium rounded-full w-fit transition-all duration-300 ease-in-out"
+              onClick={() => setShowEligibilityForm(true)}
+            >
               vérifier mon éligibilité
             </button>
           </div>
@@ -54,7 +63,10 @@ const Aids = ({ setShowEligibilityForm }) => {
             at bibendum urna dolor sit amet diam.
           </p>
           <div className="flex w-full h-full items-center justify-center transition-all duration-500 ease-in-out">
-            <button className="px-8 py-2 bg-main_color text-white group-hover:text-main_color group-hover:bg-white border-2 border-gray-100 group-hover:border-main_color text-base font-medium rounded-full w-fit transition-all duration-300 ease-in-out">
+            <button
+              className="px-8 py-2 bg-main_color text-white group-hover:text-main_color group-hover:bg-white border-2 border-gray-100 group-hover:border-main_color text-base font-medium rounded-full w-fit transition-all duration-300 ease-in-out"
+              onClick={() => setShowEligibilityForm(true)}
+            >
               vérifier mon éligibilité
             </button>
           </div>
@@ -67,7 +79,10 @@ const Aids = ({ setShowEligibilityForm }) => {
             at bibendum urna dolor sit amet diam.
           </p>
           <div className="flex w-full h-full items-center justify-center transition-all duration-500 ease-in-out">
-            <button className="px-8 py-2 bg-main_color text-white group-hover:text-main_color group-hover:bg-white border-2 border-gray-100 group-hover:border-main_color text-base font-medium rounded-full w-fit transition-all duration-300 ease-in-out">
+            <button
+              className="px-8 py-2 bg-main_color text-white group-hover:text-main_color group-hover:bg-white border-2 border-gray-100 group-hover:border-main_color text-base font-medium rounded-full w-fit transition-all duration-300 ease-in-out"
+              onClick={() => setShowEligibilityForm(true)}
+            >
               vérifier mon éligibilité
             </button>
           </div>

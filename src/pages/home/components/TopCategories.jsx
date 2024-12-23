@@ -33,7 +33,7 @@ const TopCategories = () => {
     setIsAtEnd(scrollLeft + clientWidth >= scrollWidth);
   };
   return (
-    <div className="my-8 px-mobile_padding bg-gray-100 py-4">
+    <div className="mt-8 px-mobile_padding bg-gray-100 py-4">
       <div className="p-4 bg-white">
         <h1 className="font-bold md:text-3xl text-xl text-center lg:mb-8 mb-6">
           Catégories de formations
@@ -64,7 +64,7 @@ const TopCategories = () => {
             {categories.map((category) => {
               return (
                 <NavLink
-                  to={`/recherches/formations/?categorie=${category.name}`}
+                  to={`/formations/recherches?categorie=${category.name}`}
                   key={category.name}
                   className="relative flex items-center justify-center w-52 min-w-52 h-52 rounded-full bg-[#20C997] cursor-pointer"
                 >

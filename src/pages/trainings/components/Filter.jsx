@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  MdOutlineCheckBoxOutlineBlank,
-  MdCheckBox,
-  MdOutlineFilterList,
-} from "react-icons/md";
+import { MdOutlineFilterList } from "react-icons/md";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 import CustomCheckBox from "../../../components/CustomCheckBox";
 import {
