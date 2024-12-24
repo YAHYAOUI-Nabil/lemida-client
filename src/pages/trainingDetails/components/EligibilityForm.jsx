@@ -175,7 +175,7 @@ const EligibilityForm = ({ setShowEligibilityForm }) => {
                   <span>
                     J’accepte{" "}
                     <NavLink
-                      to="/"
+                      to="/politiques-de-confidentialite"
                       className="underline underline-offset-4 hover:no-underline"
                     >
                       la Politique de Confidentialité des Données
