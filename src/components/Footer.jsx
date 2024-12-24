@@ -47,7 +47,7 @@ const Footer = () => {
             <ul className="mt-2 space-y-2 text-sm font-medium">
               <li>
                 <NavLink
-                  to="/"
+                  to="/formations"
                   className="transition-opacity duration-100 hover:opacity-80"
                 >
                   Toutes nos formations
@@ -55,7 +55,7 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink
-                  to="/"
+                  to="/formations"
                   className="transition-opacity duration-100 hover:opacity-80"
                 >
                   Offres spécials
@@ -69,7 +69,7 @@ const Footer = () => {
             <ul className="mt-2 space-y-2 text-sm font-medium">
               <li>
                 <NavLink
-                  to="/"
+                  to="/a-propos"
                   className="transition-opacity duration-100 hover:opacity-80"
                 >
                   À propos
@@ -77,7 +77,7 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink
-                  to="/faq"
+                  to="/contact"
                   className="transition-opacity duration-100 hover:opacity-80"
                 >
                   Contactez-nous
