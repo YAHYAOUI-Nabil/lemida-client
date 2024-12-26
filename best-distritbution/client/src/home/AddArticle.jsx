@@ -20,7 +20,7 @@ const AddArticle = () => {
 
     try {
       const response = await axios.post(
-        "http://51.83.69.195:3000/articles",
+        "http://51.83.69.195:6000/articles",
         formData,
         {
           headers: {

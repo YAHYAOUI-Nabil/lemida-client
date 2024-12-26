@@ -2593,7 +2593,7 @@ function prefix2(value, length2) {
       return (
         WEBKIT + value + MS + replace(value, "basis", "preferred-size") + value
       );
-    case 3000:
+    case 6000:
       return (
         WEBKIT +
         "box-" +
@@ -5113,7 +5113,7 @@ var bounceInDown = keyframes`
 
   0% {
     opacity: 0;
-    transform: translate3d(0, -3000px, 0) scaleY(3);
+    transform: translate3d(0, -6000px, 0) scaleY(3);
   }
 
   60% {
@@ -5144,7 +5144,7 @@ var bounceInLeft = keyframes`
 
   0% {
     opacity: 0;
-    transform: translate3d(-3000px, 0, 0) scaleX(3);
+    transform: translate3d(-6000px, 0, 0) scaleX(3);
   }
 
   60% {
@@ -5175,7 +5175,7 @@ var bounceInRight = keyframes`
 
   from {
     opacity: 0;
-    transform: translate3d(3000px, 0, 0) scaleX(3);
+    transform: translate3d(6000px, 0, 0) scaleX(3);
   }
 
   60% {
@@ -5206,7 +5206,7 @@ var bounceInUp = keyframes`
 
   from {
     opacity: 0;
-    transform: translate3d(0, 3000px, 0) scaleY(5);
+    transform: translate3d(0, 6000px, 0) scaleY(5);
   }
 
   60% {

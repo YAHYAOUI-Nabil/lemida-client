@@ -7,7 +7,7 @@ const Message = () => {
 
   const fetchMessages = async () => {
     try {
-      const response = await axios.get("http://51.83.69.195:3000/api/messages");
+      const response = await axios.get("http://51.83.69.195:6000/api/messages");
       if (Array.isArray(response.data)) {
         setMessages(response.data);
       } else {
@@ -27,7 +27,7 @@ const Message = () => {
 
   const deleteMessage = async (id) => {
     try {
-      await axios.delete(`http://51.83.69.195:3000/api/messages/${id}`);
+      await axios.delete(`http://51.83.69.195:6000/api/messages/${id}`);
       setMessages((prev) => prev.filter((message) => message._id !== id));
     } catch (error) {
       console.error("Erreur lors de la suppression du message :", error);

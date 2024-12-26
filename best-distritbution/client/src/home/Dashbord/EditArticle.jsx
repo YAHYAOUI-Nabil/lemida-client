@@ -33,8 +33,8 @@ const EditArticle = () => {
     if (image) formData.append("image", image);
 
     const url = location.state?.article
-      ? `http://51.83.69.195:3000/articles/${location.state.article._id}`
-      : "http://51.83.69.195:3000/articles";
+      ? `http://51.83.69.195:6000/articles/${location.state.article._id}`
+      : "http://51.83.69.195:6000/articles";
     const method = location.state?.article ? "PUT" : "POST";
 
     try {
