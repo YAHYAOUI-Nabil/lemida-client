@@ -10,7 +10,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://51.83.69.195:5001/api/messages', formData);
+      await axios.post('http://51.83.69.195:6000/api/messages', formData);
       alert('Message envoyé avec succès');
       setFormData({ name: "", email: "", content: ""  ,telephone:""});
     } catch (error) {

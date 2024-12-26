@@ -45,7 +45,7 @@ const Devis = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      axios.post("http://51.83.69.195:5001/api/devis", formData)
+      axios.post("http://51.83.69.195:6000/api/devis", formData)
         .then(res => {
           console.log(res.data);
           alert("Votre demande a été envoyée avec succès");

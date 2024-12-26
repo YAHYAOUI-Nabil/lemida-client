@@ -19,7 +19,7 @@ const AddArticle = () => {
     formData.append("quantite", data.quantite);
   
     try {
-      const response = await axios.post("http://51.83.69.195:5001/articles", formData, {
+      const response = await axios.post("http://51.83.69.195:6000/articles", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

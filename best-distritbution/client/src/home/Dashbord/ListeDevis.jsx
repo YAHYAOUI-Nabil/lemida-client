@@ -6,7 +6,7 @@ const ListeDevis = () => {
   
   useEffect(() => {
     // Récupérer tous les devis
-    axios.get("http://51.83.69.195:5001/api/devis")
+    axios.get("http://51.83.69.195:6000/api/devis")
       .then(res => {
         setDevisList(res.data);
       })
@@ -18,7 +18,7 @@ const ListeDevis = () => {
 
   const handleDelete = (id) => {
     // Supprimer un devis
-    axios.delete(`http://51.83.69.195:5001/api/devis/${id}`)
+    axios.delete(`http://51.83.69.195:6000/api/devis/${id}`)
       .then(res => {
         setDevisList(devisList.filter(devis => devis._id !== id)); // Retirer le devis de la liste
         alert("Le devis a été supprimé avec succès");
