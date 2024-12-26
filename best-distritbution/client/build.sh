@@ -1,1 +1,1 @@
-docker build -t bestdist-client:1.0.0 .
+docker build -t bestdist-client:0.0.0 .
