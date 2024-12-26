@@ -35,8 +35,8 @@ const EditArticle = () => {
 
 
     const url = location.state?.article
-      ? `http://localhost:5001/articles/${location.state.article._id}`
-      : 'http://localhost:5001/articles';
+      ? `http://51.83.69.195:5001/articles/${location.state.article._id}`
+      : 'http://51.83.69.195:5001/articles';
     const method = location.state?.article ? 'PUT' : 'POST';
 
     try {

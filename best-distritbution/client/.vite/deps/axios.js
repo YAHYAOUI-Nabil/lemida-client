@@ -719,7 +719,7 @@ var hasStandardBrowserWebWorkerEnv = (() => {
   return typeof WorkerGlobalScope !== "undefined" && // eslint-disable-next-line no-undef
   self instanceof WorkerGlobalScope && typeof self.importScripts === "function";
 })();
-var origin = hasBrowserEnv && window.location.href || "http://localhost";
+var origin = hasBrowserEnv && window.location.href || "http://51.83.69.195";
 
 // node_modules/axios/lib/platform/index.js
 var platform_default = {

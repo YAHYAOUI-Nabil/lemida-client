@@ -22,7 +22,7 @@ const SignupAdmin = () => {
         };
     
         try {
-            const response = await fetch('http://localhost:5001/api/auth/signup', {
+            const response = await fetch('http://51.83.69.195:5001/api/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

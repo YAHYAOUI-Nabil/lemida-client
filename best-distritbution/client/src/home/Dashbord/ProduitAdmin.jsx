@@ -9,7 +9,7 @@ const ProduitAdmin = () => {
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await fetch('http://localhost:5001/articles');
+        const response = await fetch('http://51.83.69.195:5001/articles');
         if (response.ok) {
           const data = await response.json();
           setCards(data);
@@ -28,7 +28,7 @@ const ProduitAdmin = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Voulez-vous vraiment supprimer cet article ?')) {
       try {
-        const response = await fetch(`http://localhost:5001/articles/${id}`, { method: 'DELETE' });
+        const response = await fetch(`http://51.83.69.195:5001/articles/${id}`, { method: 'DELETE' });
         
         if (!response.ok) {
           throw new Error(`Erreur: ${response.statusText}`);
@@ -58,7 +58,7 @@ const ProduitAdmin = () => {
             <div key={index} className="card border p-4 shadow rounded w-full max-w-xs">
               {card.imageUrl && (
                 <img
-                  src={`http://localhost:5001${card.imageUrl}`}
+                  src={`http://51.83.69.195:5001${card.imageUrl}`}
                   alt={card.titre}
                   className="w-full h-auto rounded mb-4"
                 />
