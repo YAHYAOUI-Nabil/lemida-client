@@ -11,5 +11,5 @@ ENV NODE_ENV prod
 COPY . .
 
 # Exports
-EXPOSE 6060
+EXPOSE 3000
 CMD ["npm","start"]
