@@ -46,7 +46,7 @@ const Cards = () => {
     };
 
     try {
-      const response = await fetch("http://51.83.69.195:6000/api/commandes", {
+      const response = await fetch("http://51.83.69.195:3000/api/commandes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const Cards = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get("http://51.83.69.195:6000/articles");
+        const response = await axios.get("http://51.83.69.195:3000/articles");
         setCards(response.data);
       } catch (error) {
         console.error("Erreur lors de la récupération des articles :", error);
@@ -295,7 +295,7 @@ const CardItem = ({ card, onAddToCart }) => {
     <div className="border p-4 shadow rounded w-full h-full flex flex-col justify-between">
       {card.imageUrl && (
         <img
-          src={`http://51.83.69.195:6000${card.imageUrl}`}
+          src={`http://51.83.69.195:3000${card.imageUrl}`}
           alt={card.titre}
           className="w-full h-auto rounded mb-4"
         />
