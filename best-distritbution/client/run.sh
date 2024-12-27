@@ -1,1 +1,1 @@
-docker run --net lnr-network -it -d --restart=always --name bestdist-client -h bestdist-client -p 8081:8081 -e HOST_NAME="prod" bestdist-client:0.0.0
+docker run --net lnr-network -it -d --restart=always --name bestdist-client -h bestdist-client -p 3001:3001 -e HOST_NAME="prod" bestdist-client:0.0.0
