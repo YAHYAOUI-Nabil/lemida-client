@@ -239,7 +239,7 @@ app.delete("/api/devis/:id", async (req, res) => {
 });
 
 // Démarrer le serveur
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || 6000;
 app.listen(PORT, () => {
-  console.log("Serveur démarré sur le port 7000");
+  console.log("Serveur démarré sur le port 6000");
 });

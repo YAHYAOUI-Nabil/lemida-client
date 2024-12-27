@@ -31,7 +31,7 @@ const Commandes = () => {
   const fetchCommandes = async () => {
     try {
       const response = await axios.get(
-        "http://51.83.69.195:7000/api/commandes"
+        "http://51.83.69.195:6000/api/commandes"
       ); // URL complète pour éviter des problèmes de proxy
       console.log("Réponse API :", response.data); // Vérifiez si les commandes sont bien reçues
       setCommandes(response.data);
@@ -42,7 +42,7 @@ const Commandes = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://51.83.69.195:7000/commandes/${id}`);
+      await axios.delete(`http://51.83.69.195:6000/commandes/${id}`);
       setCommandes(commandes.filter((commande) => commande._id !== id));
     } catch (err) {
       console.error(err);
@@ -52,7 +52,7 @@ const Commandes = () => {
   const handleStatusChange = async (id, status) => {
     try {
       const response = await axios.patch(
-        `http://51.83.69.195:7000/commandes/${id}`,
+        `http://51.83.69.195:6000/commandes/${id}`,
         { livraison: status }
       );
       setCommandes(

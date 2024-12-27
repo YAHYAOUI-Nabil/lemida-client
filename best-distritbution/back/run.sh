@@ -1,1 +1,1 @@
-docker run --net lnr-network  -it -d --restart=always --name best-dist-back -h best-dist-back -p 3000:3000  -e HOST_NAME="prod" best-dist-back:1.0.0
+docker run --net lnr-network  -it -d --restart=always --name best-dist-back -h best-dist-back -p 6000:6000  -e HOST_NAME="prod" best-dist-back:1.0.0
