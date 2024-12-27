@@ -139,10 +139,7 @@ export default function Footer() {
             </div>
 
         </div>
-                  {/* Copyright Section */}
-                  <p className="text-black font-semibold text-center text-md pb-12">
-          © {new Date().getFullYear()} LNR Finance. Tous droits réservés.
-        </p>
+
        
     </div>
 

@@ -37,17 +37,21 @@ const ListeDevis = () => {
         <h1 className="text-3xl font-bold text-gray-700 dark:text-white">
           Liste des devis
         </h1>
-        <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ">
           {devisList.map((devis) => (
             <div
               key={devis._id}
-              className="p-6 border border-gray-300 rounded-md dark:bg-dark dark:text-gray-300"
+              className="p-6 border border-gray-300 rounded-md dark:bg-dark dark:text-gray-300 max-h-96"
             >
               <h2 className="text-xl font-semibold">
                 {devis.firstName} {devis.lastName}
               </h2>
               <p> {devis.email}</p>
               <p> {devis.mobileNumber}</p>
+              <p> {devis.adresse} ,{devis.codePostal}</p>
+              <p> {devis.nomEntreprise}  </p>
+              <p> {devis.siren}</p>
+              <p> {devis.siret}</p>
               <p className="text-green-700"> {devis.article}</p>
               <p className="text-black"> {devis.informations}</p>
               <p className="text-gray-500 text-sm">

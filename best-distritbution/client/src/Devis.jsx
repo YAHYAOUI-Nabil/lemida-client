@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import Swal from "sweetalert2";
 const Devis = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -9,6 +9,11 @@ const Devis = () => {
     mobileNumber: "",
     informations: "",
     article: [], // Ajout du champ article pour les cases à cocher
+    siren: "",
+    siret: "",
+    adresse:"",
+    nomEntreprise:"",
+    codePostal: "" ,
   });
 
   const [errors, setErrors] = useState({});
@@ -33,9 +38,16 @@ const Devis = () => {
 
   const validate = () => {
     let tempErrors = {};
+    const sirenRegex = /^\d{9}$/;  
+    const siretRegex = /^\d{14}$/; 
+    if (!formData.siret) tempErrors.siret = "siret est requis.";
+    if (!formData.siren) tempErrors.siren = "siren est requis.";
     if (!formData.firstName) tempErrors.firstName = "Nom est requis.";
     if (!formData.lastName) tempErrors.lastName = "Prénom est requis.";
     if (!formData.email) tempErrors.email = "Email est requis.";
+    if (!formData.adresse) tempErrors.adresse = "adresse est requis.";
+    if (!formData.nomEntreprise) tempErrors.nomEntreprise = "nom entreprise est requis.";
+    if (!formData.codePostal) tempErrors.codePostal = "code postal est requis.";
     if (!formData.mobileNumber)
       tempErrors.mobileNumber = "N° de téléphone est requis.";
     if (!formData.informations)
@@ -50,15 +62,23 @@ const Devis = () => {
       axios
         .post("http://51.83.69.195:7000/api/devis", formData)
         .then((res) => {
-          console.log(res.data);
-          alert("Votre demande a été envoyée avec succès");
+          Swal.fire({
+            icon: "success",
+            title: "Demande envoyée",
+            text: "Votre demande a été envoyée avec succès.",
+          });
           setFormData({
             firstName: "",
             lastName: "",
             email: "",
             mobileNumber: "",
             informations: "",
-            article: [], // Réinitialise le champ article après envoi
+            article: [],
+            siren: "",
+            siret: "",
+            nomEntreprise: "", 
+            adresse:"",
+            codePostal:"",
           });
           setErrors({});
         })
@@ -70,11 +90,25 @@ const Devis = () => {
               tempErrors[key] = backendErrors[key].message;
             });
             setErrors(tempErrors);
+            Swal.fire({
+              icon: "error",
+              title: "Erreur",
+              text: "Veuillez corriger les erreurs ci-dessous.",
+            });
           } else {
-            console.log(err);
-            alert("Une erreur est survenue");
+            Swal.fire({
+              icon: "error",
+              title: "Erreur",
+              text: "Une erreur est survenue. Veuillez réessayer plus tard.",
+            });
           }
         });
+    } else {
+      Swal.fire({
+        icon: "warning",
+        title: "Formulaire incomplet",
+        text: "Veuillez corriger les erreurs dans le formulaire.",
+      });
     }
   };
   return (
@@ -169,6 +203,99 @@ const Devis = () => {
               <p className="text-red-500 text-xs">{errors.mobileNumber}</p>
             )}
           </div>
+          <div>
+            <label
+              htmlFor="adresse"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Adresse
+            </label>
+            <input
+              type="text"
+              name="adresse"
+              id="adresse"
+              value={formData.adresse}
+              onChange={handleChange}
+              className="mt-2 block w-full rounded-md border border-gray-300 py-2 pl-2 pr-4  dark:border-dark-3 dark:bg-dark dark:text-gray-300"
+            />
+            {errors.adresse && (
+              <p className="text-red-500 text-xs">{errors.adresse}</p>
+            )}
+          </div>
+          <div>
+            <label
+              htmlFor="adresse"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Code postal
+            </label>
+            <input
+              type="text"
+              name="codePostal"
+              id="codePostal"
+              value={formData.codePostal}
+              onChange={handleChange}
+              className="mt-2 block w-full rounded-md border border-gray-300 py-2 pl-2 pr-4  dark:border-dark-3 dark:bg-dark dark:text-gray-300"
+            />
+            {errors.codepostal && (
+              <p className="text-red-500 text-xs">{errors.codePostal}</p>
+            )}
+          </div>
+          <div>
+            <label
+              htmlFor="nomEntreprise"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Nom entreprise
+            </label>
+            <input
+              type="text"
+              name="nomEntreprise"
+              id="nomEntreprise"
+              value={formData.nomEntreprise}
+              onChange={handleChange}
+              className="mt-2 block w-full rounded-md border border-gray-300 py-2 pl-2 pr-4  dark:border-dark-3 dark:bg-dark dark:text-gray-300"
+            />
+            {errors.nomEntreprise && (
+              <p className="text-red-500 text-xs">{errors.nomEntreprise}</p>
+            )}
+          </div>
+          <div>
+            <label
+              htmlFor="siren"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              SIREN
+            </label>
+            <input
+              type="text"
+              name="siren"
+              id="siren"
+              value={formData.siren}
+              onChange={handleChange}
+              className="mt-2 block w-full rounded-md border border-gray-300 py-2 pl-2 pr-4 dark:border-dark-3 dark:bg-dark dark:text-gray-300"
+            />
+            {errors.siren && <p className="text-red-500 text-xs">{errors.siren}</p>}
+          </div>
+
+          <div>
+            <label
+              htmlFor="siret"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              SIRET
+            </label>
+            <input
+              type="text"
+              name="siret"
+              id="siret"
+              value={formData.siret}
+              onChange={handleChange}
+              className="mt-2 block w-full rounded-md border border-gray-300 py-2 pl-2 pr-4 dark:border-dark-3 dark:bg-dark dark:text-gray-300"
+            />
+            {errors.siret && <p className="text-red-500 text-xs">{errors.siret}</p>}
+            
+          </div>
 
           <div className="md:col-span-2 lg:col-span-3">
             <fieldset>
@@ -203,6 +330,7 @@ const Devis = () => {
                   <span className="ml-2">Sac biodégradable 2</span>
                 </label>
               </div>
+              {errors.article && <p className="text-red-500 text-xs">{errors.article}</p>}
             </fieldset>
           </div>
 
