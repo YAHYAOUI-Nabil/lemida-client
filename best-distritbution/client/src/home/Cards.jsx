@@ -128,7 +128,7 @@ const Cards = () => {
       <h2 className="text-4xl font-bold text-center text-green-700 mb-8">
         Nos produits
       </h2>
-      <div className="relative px-12 sm:px-14 lg:px-16">
+      <div className="relative px-6 sm:px-8 lg:px-12">
         {/* Bouton pour défiler à gauche */}
         <button
           onClick={scrollLeft}
@@ -143,7 +143,7 @@ const Cards = () => {
           ref={cardContainerRef}
         >
           {cards.map((card, index) => (
-            <div className="flex-none w-96" key={card.id || index}>
+            <div className="flex-none w-72" key={card.id || index}>
               <CardItem card={card} onAddToCart={addToCart} />
             </div>
           ))}
@@ -297,7 +297,7 @@ const CardItem = ({ card, onAddToCart }) => {
         <img
           src={`http://51.83.69.195:7000${card.imageUrl}`}
           alt={card.titre}
-          className="w-full h-auto rounded mb-4"
+          className="w-56 h-44 rounded mb-4"
         />
       )}
       <h3 className="text-2xl font-bold mt-4">{card.titre}</h3>

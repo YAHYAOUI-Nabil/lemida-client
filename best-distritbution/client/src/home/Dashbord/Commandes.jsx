@@ -95,7 +95,7 @@ const Commandes = () => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell sx={{ color: "green" }}>Livraison</TableCell>
+            <TableCell sx={{ color: "green" }}>Etat de commande </TableCell>
             <TableCell sx={{ color: "green" }}>Nom & Prénom</TableCell>
             <TableCell sx={{ color: "green" }}>Email</TableCell>
             <TableCell sx={{ color: "green" }}>Téléphone</TableCell>
