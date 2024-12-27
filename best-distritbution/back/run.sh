@@ -1,1 +1,1 @@
-docker run --net lnr-network  -it -d --restart=always --name best-dist-back -h best-dist-back -p 7000:7000 -v /home/ubuntu/uploads:/usr/src/app/uploads  -e HOST_NAME="prod" best-dist-back:1.0.0
+docker run --net lnr-network  -it -d --restart=always --name best-dist-back -h best-dist-back -p 7000:7000   -e HOST_NAME="prod" best-dist-back:1.0.0
