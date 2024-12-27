@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package.json package-lock.json ./
 
-# Install deApendencies
+# Install dependencies
 RUN npm install
 
 # Copy the rest of the application code
@@ -24,7 +24,7 @@ FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY default.conf /etc/nginx/conf.d/
 # Expose port 80
-EXPOSE 82
+EXPOSE 8282
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
