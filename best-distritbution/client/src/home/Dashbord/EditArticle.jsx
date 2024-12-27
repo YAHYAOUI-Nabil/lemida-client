@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const EditArticle = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [titre, setTitre] = useState('');
-  const [description, setDescription] = useState('');
-  const [prix, setPrix] = useState('');
-  const [quantite, setQuantite] = useState('');
+  const [titre, setTitre] = useState("");
+  const [description, setDescription] = useState("");
+  const [prix, setPrix] = useState("");
+  const [quantite, setQuantite] = useState("");
   const [image, setImage] = useState(null);
 
   // Pré-remplir le formulaire en cas de modification
   useEffect(() => {
     if (location.state?.article) {
-      const { titre, description, prix , quantite } = location.state.article;
+      const { titre, description, prix, quantite } = location.state.article;
       setTitre(titre);
       setDescription(description);
       setPrix(prix);
@@ -26,18 +26,16 @@ const EditArticle = () => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append('titre', titre);
-    formData.append('description', description);
-    formData.append('prix', prix);
-    formData.append('quantite', quantite);
-    if (image) formData.append('image', image);
-
-
+    formData.append("titre", titre);
+    formData.append("description", description);
+    formData.append("prix", prix);
+    formData.append("quantite", quantite);
+    if (image) formData.append("image", image);
 
     const url = location.state?.article
       ? `http://51.83.69.195:6000/articles/${location.state.article._id}`
-      : 'http://51.83.69.195:6000/articles';
-    const method = location.state?.article ? 'PUT' : 'POST';
+      : "http://51.83.69.195:6000/articles";
+    const method = location.state?.article ? "PUT" : "POST";
 
     try {
       const response = await fetch(url, {
@@ -46,10 +44,14 @@ const EditArticle = () => {
       });
 
       if (response.ok) {
-        alert(location.state?.article ? 'Article modifié avec succès.' : 'Article ajouté avec succès.');
-        navigate('/Catalogue');
+        alert(
+          location.state?.article
+            ? "Article modifié avec succès."
+            : "Article ajouté avec succès."
+        );
+        navigate("/Catalogue");
       } else {
-        alert('Erreur lors de l\'envoi.');
+        alert("Erreur lors de l'envoi.");
       }
     } catch (error) {
       console.error(error);
@@ -59,7 +61,7 @@ const EditArticle = () => {
   return (
     <div className="max-w-lg mx-auto mt-10">
       <h2 className="text-2xl font-bold text-center mb-6">
-        {location.state?.article ? 'Modifier un article' : 'Ajouter un article'}
+        {location.state?.article ? "Modifier un article" : "Ajouter un article"}
       </h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
@@ -111,7 +113,7 @@ const EditArticle = () => {
           />
         </div>
         <button className="bg-green-500 text-white px-4 py-2 rounded w-full">
-          {location.state?.article ? 'Modifier' : 'Ajouter'}
+          {location.state?.article ? "Modifier" : "Ajouter"}
         </button>
       </form>
     </div>
