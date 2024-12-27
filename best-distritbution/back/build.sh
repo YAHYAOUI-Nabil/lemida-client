@@ -1,1 +1,1 @@
-docker build -t bestdist-back:1.0.0 .
+docker build -t best-dist-back:1.0.0 .
