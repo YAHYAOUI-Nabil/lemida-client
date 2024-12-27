@@ -15,7 +15,7 @@ const LoginAdmin = () => {
     const password = document.getElementById("password").value;
 
     try {
-      const response = await fetch("http://51.83.69.195:6000/login", {
+      const response = await fetch("http://51.83.69.195:7000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -48,7 +48,7 @@ const Devis = () => {
     e.preventDefault();
     if (validate()) {
       axios
-        .post("http://51.83.69.195:6000/api/devis", formData)
+        .post("http://51.83.69.195:7000/api/devis", formData)
         .then((res) => {
           console.log(res.data);
           alert("Votre demande a été envoyée avec succès");

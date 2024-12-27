@@ -9,7 +9,7 @@ const ProduitAdmin = () => {
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await fetch("http://51.83.69.195:6000/articles");
+        const response = await fetch("http://51.83.69.195:7000/articles");
         if (response.ok) {
           const data = await response.json();
           setCards(data);
@@ -29,7 +29,7 @@ const ProduitAdmin = () => {
     if (window.confirm("Voulez-vous vraiment supprimer cet article ?")) {
       try {
         const response = await fetch(
-          `http://51.83.69.195:6000/articles/${id}`,
+          `http://51.83.69.195:7000/articles/${id}`,
           { method: "DELETE" }
         );
 
@@ -66,7 +66,7 @@ const ProduitAdmin = () => {
             >
               {card.imageUrl && (
                 <img
-                  src={`http://51.83.69.195:6000${card.imageUrl}`}
+                  src={`http://51.83.69.195:7000${card.imageUrl}`}
                   alt={card.titre}
                   className="w-full h-auto rounded mb-4"
                 />
