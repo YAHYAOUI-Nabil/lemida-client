@@ -1,16 +1,20 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-// import { useLoginMutation } from "../../app/api/public/auth";
 import { NavLink, useNavigate } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { setCurrentUser } from "../../app/store/authSlice";
-import { useEffect, useState } from "react";
-// import { useAuth } from "../../app/hooks/useAuth";
+import { useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { useRegisterMutation } from "../../../app/api/public/auth";
+import { setCurrentUser } from "../../../app/store/auth";
+import { useDispatch } from "react-redux";
 
 const schema = yup.object().shape({
-  username: yup
+  firstName: yup
+    .string()
+    .min(4)
+    .matches(/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/, "only letters accepted")
+    .required(),
+  lastName: yup
     .string()
     .min(4)
     .matches(/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/, "only letters accepted")
@@ -36,9 +40,9 @@ const schema = yup.object().shape({
 
 const Register = () => {
   // const auth = useAuth();
-  // const [login, { isLoading }] = useLoginMutation();
+  const [signup, { isLoading }] = useRegisterMutation();
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -57,7 +61,8 @@ const Register = () => {
     setError,
   } = useForm({
     defaultValues: {
-      username: "",
+      firstName: "",
+      lastName: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -68,8 +73,8 @@ const Register = () => {
   const submit = async (values) => {
     try {
       console.log(values);
-      // const user = await login(values).unwrap();
-      // dispatch(setCurrentUser(user));
+      const user = await signup(values).unwrap();
+      dispatch(setCurrentUser(user));
       // navigate("/");
     } catch (error) {
       setError("email", {
@@ -96,18 +101,36 @@ const Register = () => {
         <div className="relative z-0 w-full group mb-6">
           <input
             type="text"
-            id="username"
+            id="firstName"
             className={`${
-              errors.username ? "border-red-600" : "border-main_color"
+              errors.firstName ? "border-red-600" : "border-main_color"
             } block py-2.5 px-0 w-full text-base text-gray-700 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-[#20C997] transition-colors duration-200 delay-0 ease-in-expo peer`}
             placeholder=" "
-            {...register("username")}
+            {...register("firstName")}
           />
           <label
-            htmlFor="username"
+            htmlFor="firstName"
             className="absolute text-base peer-focus:font-[500] peer-focus:text-base text-gray-600 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
           >
-            Nom et Prénom
+            Prénom
+          </label>
+        </div>
+
+        <div className="relative z-0 w-full group mb-6">
+          <input
+            type="text"
+            id="lastName"
+            className={`${
+              errors.lastName ? "border-red-600" : "border-main_color"
+            } block py-2.5 px-0 w-full text-base text-gray-700 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-[#20C997] transition-colors duration-200 delay-0 ease-in-expo peer`}
+            placeholder=" "
+            {...register("lastName")}
+          />
+          <label
+            htmlFor="lastName"
+            className="absolute text-base peer-focus:font-[500] peer-focus:text-base text-gray-600 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >
+            Nom
           </label>
         </div>
 
@@ -204,7 +227,7 @@ const Register = () => {
         <p className="text-sm">
           Déjà avez-vous un compte?{" "}
           <NavLink
-            to="/connexion/login"
+            to="/connexion"
             className="text-main_color hover:underline font-medium"
           >
             Se connecter

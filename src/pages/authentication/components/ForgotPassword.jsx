@@ -85,7 +85,7 @@ const Login = () => {
       </form>
       <div className="mt-4 text-center">
         <NavLink
-          to="/connexion/login"
+          to="/connexion"
           className="text-main_color hover:underline font-medium"
         >
           Retour

@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineFilterList } from "react-icons/md";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 import CustomCheckBox from "../../../components/CustomCheckBox";
 import {
   aidFilters,
+  btpJobFilters,
   durationFilters,
-  jobFilters,
+  medicalJobFilters,
 } from "../../../assets/data/filterItems";
+import { useLocation } from "react-router-dom";
 
 const Filter = () => {
   const [showFilter, setShowFilter] = useState(false);
@@ -16,6 +18,17 @@ const Filter = () => {
   const [jobQuery, setJobQuery] = useState([]);
   const [aidQuery, setAidQuery] = useState([]);
   const [durationQuery, setDurationQuery] = useState([]);
+  const [jobFilters, setJobFilters] = useState([]);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/formations/categorie/sante") {
+      setJobFilters(medicalJobFilters);
+    } else {
+      setJobFilters(btpJobFilters);
+    }
+  }, [location]);
 
   const handleFilterJobQuery = (query) => {
     if (jobQuery.includes(query)) {
@@ -95,8 +108,8 @@ const Filter = () => {
                 key={item}
                 label={item}
                 id={item}
-                list={durationQuery}
-                handleList={handleFilterDurationQuery}
+                list={jobQuery}
+                handleList={handleFilterJobQuery}
               />
             ))}
           </div>
@@ -121,8 +134,8 @@ const Filter = () => {
                 key={item}
                 label={item}
                 id={item}
-                list={durationQuery}
-                handleList={handleFilterDurationQuery}
+                list={aidQuery}
+                handleList={handleFilterAidQuery}
               />
             ))}
           </div>

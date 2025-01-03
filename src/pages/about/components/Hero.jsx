@@ -15,12 +15,12 @@ const Hero = () => {
           <div className="flex xl:flex-row flex-col gap-6">
             <NavLink
               to="/contact"
-              className="bg-black px-6 py-3 rounded-full text-white hover:opacity-90 w-fit"
+              className="bg-primary px-6 py-3 rounded-full text-white hover:text-primary hover:bg-secondary border border-transparent hover:border-primary w-fit transition-all duration-500 ease-in-out"
             >
               Demander une information
             </NavLink>
             <NavLink
-              to="/formations"
+              to="/formations/categorie/sante"
               className="bg-white px-6 py-3 rounded-full hover:opacity-90 flex items-center w-fit gap-2"
             >
               <span>Toutes les formations</span> <FaLongArrowAltRight />

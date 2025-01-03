@@ -13,12 +13,12 @@ const CustomCheckBox = ({ id, list, handleList, label }) => {
       />
       <label
         htmlFor={id}
-        className="cursor-pointer flex items-center gap-1 text-sm"
+        className="cursor-pointer flex items-start gap-1 text-sm"
       >
         {list.includes(label) ? (
-          <MdCheckBox className="w-5 h-5" />
+          <MdCheckBox className="w-5 h-5 min-w-5 min-h-5" />
         ) : (
-          <MdOutlineCheckBoxOutlineBlank className="w-5 h-5" />
+          <MdOutlineCheckBoxOutlineBlank className="w-5 h-5 min-w-5 min-h-5" />
         )}
         {label}
       </label>

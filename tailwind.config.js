@@ -5,21 +5,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: "#114d5b",
+        secondary: "#e2f1f5",
+        tertiary: "#e8e8e8",
         header_text_color: "#000",
         header_background_color: "#FAFAFA",
         nav_color: "#000",
-        nav_focus_color: "#2234A8",
+        nav_focus_color: "#114d5b",
         footer_text_color: "#fff",
         footer_text_hover_color: "#fff",
-        footer_background_color: "#2234A8",
-        main_color: "#2234A8",
+        footer_background_color: "#114d5b",
+        main_color: "#114d5b",
         secondary_color: "",
         bgFrom: "#4C0873",
         bgTo: "#4C0873",
         HoverBgTo: "#00474F",
       },
       padding: {
-        desktop_padding: "60px",
+        desktop_padding: "90px",
+        laptop_padding: "60px",
         tablet_padding: "30px",
         mobile_padding: "16px",
       },
@@ -32,6 +36,9 @@ module.exports = {
       animation: {
         mover: "mover 15s infinite  linear",
         show: "show 3s  linear",
+        hide: "hide 100ms ease-in",
+        slideIn: "slideIn 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+        swipeOut: "swipeOut 100ms ease-out",
       },
       keyframes: {
         mover: {
@@ -42,6 +49,21 @@ module.exports = {
           "0%": { opacity: 0 },
           "50%": { opacity: 0 },
           "100%": { opacity: 100 },
+        },
+
+        hide: {
+          from: { opacity: "1" },
+          to: { opacity: "0" },
+        },
+        slideIn: {
+          from: {
+            transform: "translateX(calc(100% + var(--viewport-padding)))",
+          },
+          to: { transform: "translateX(0)" },
+        },
+        swipeOut: {
+          from: { transform: "translateX(var(--radix-toast-swipe-end-x))" },
+          to: { transform: "translateX(calc(100% + var(--viewport-padding)))" },
         },
       },
     },

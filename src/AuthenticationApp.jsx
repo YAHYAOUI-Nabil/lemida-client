@@ -16,7 +16,7 @@ const AuthenticationApp = () => {
   return (
     <Routes>
       <Route path="/connexion" element={<Authentication />}>
-        <Route path="login" element={<Login />} />
+        <Route index element={<Login />} />
         <Route path="inscrire" element={<Register />} />
         <Route path="mot-de-passe-oublie" element={<ForgotPassword />} />
       </Route>

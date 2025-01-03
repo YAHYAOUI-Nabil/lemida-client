@@ -11,6 +11,18 @@ const About = React.lazy(() => import("./pages/about"));
 const LegalNotices = React.lazy(() => import("./pages/legalNotices"));
 const PrivacyPolicy = React.lazy(() => import("./pages/privacyPolicy"));
 const TermsOfUse = React.lazy(() => import("./pages/termsAndConditionsOfUse"));
+const CandidateDashboard = React.lazy(() =>
+  import("./pages/candidateDashboard")
+);
+const CandidateProfile = React.lazy(() =>
+  import("./pages/candidateDashboard/profile")
+);
+const CandidateEnrolledTrainings = React.lazy(() =>
+  import("./pages/candidateDashboard/enrolledTrainings")
+);
+const CandidateUpdatePassword = React.lazy(() =>
+  import("./pages/candidateDashboard/updatePassword")
+);
 
 const AppRoutes = () => {
   return (
@@ -24,7 +36,7 @@ const AppRoutes = () => {
         }
       />
       <Route
-        path="/formations"
+        path="/formations/categorie/:categorie"
         element={
           <React.Suspense fallback={<LoadingSpinner />}>
             <Trainings />
@@ -87,6 +99,21 @@ const AppRoutes = () => {
           </React.Suspense>
         }
       />
+      <Route
+        path="/compte/profil"
+        element={
+          <React.Suspense fallback={<LoadingSpinner />}>
+            <CandidateDashboard />
+          </React.Suspense>
+        }
+      >
+        <Route index element={<CandidateProfile />} />
+        <Route path="mes-formations" element={<CandidateEnrolledTrainings />} />
+        <Route
+          path="modifier-mot-de-passe"
+          element={<CandidateUpdatePassword />}
+        />
+      </Route>
     </Routes>
   );
 };

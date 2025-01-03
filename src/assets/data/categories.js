@@ -2,10 +2,16 @@ import {
   MdLocalPharmacy,
   MdOutlineBabyChangingStation,
   MdPregnantWoman,
+  MdElectricBolt,
 } from "react-icons/md";
-import { FaBaby, FaUserNurse, FaHandHoldingMedical } from "react-icons/fa";
 import {
-  GiMorgueFeet,
+  FaBaby,
+  FaUserNurse,
+  FaHandHoldingMedical,
+  FaEnvira,
+} from "react-icons/fa";
+import {
+  GiFootprint,
   GiDiscussion,
   GiJoint,
   GiBrain,
@@ -13,12 +19,22 @@ import {
   GiHospital,
   GiMagnifyingGlass,
 } from "react-icons/gi";
-import { FaHeartPulse } from "react-icons/fa6";
+import { FaHeartPulse, FaHelmetSafety } from "react-icons/fa6";
 import { RiPsychotherapyLine } from "react-icons/ri";
 import { LiaStethoscopeSolid } from "react-icons/lia";
-import { TbMassage, TbDentalBroken, TbOld } from "react-icons/tb";
+import {
+  TbMassage,
+  TbDentalBroken,
+  TbOld,
+  TbBackhoe,
+  TbForklift,
+  TbCarCrane,
+  TbCar4WdFilled,
+} from "react-icons/tb";
+import { PiLadderSimpleLight } from "react-icons/pi";
+import { LuCable } from "react-icons/lu";
 
-export const categories = [
+export const medicalCategories = [
   {
     name: "Pharmaciens",
     icon: MdLocalPharmacy,
@@ -29,7 +45,7 @@ export const categories = [
   },
   {
     name: "Podologues",
-    icon: GiMorgueFeet,
+    icon: GiFootprint,
   },
   {
     name: "Médecins généralistes",
@@ -94,5 +110,48 @@ export const categories = [
   {
     name: "Établissements de santé",
     icon: GiHospital,
+  },
+];
+
+export const btpCategories = [
+  {
+    name: "CACES R482",
+    icon: TbBackhoe,
+  },
+  {
+    name: "CACES R486",
+    icon: TbCarCrane,
+  },
+  {
+    name: "CACES R489",
+    icon: TbForklift,
+  },
+  {
+    name: "Echafaudage roulant",
+    icon: TbCar4WdFilled,
+  },
+  {
+    name: "R408",
+    icon: PiLadderSimpleLight,
+  },
+  {
+    name: "Habilitations électriques",
+    icon: LuCable,
+  },
+  {
+    name: "Préparation aux HÉ",
+    icon: MdElectricBolt,
+  },
+  {
+    name: "Travail en hauteur",
+    icon: FaHelmetSafety,
+  },
+  {
+    name: "SST",
+    icon: FaUserNurse,
+  },
+  {
+    name: "Développement durable",
+    icon: FaEnvira,
   },
 ];

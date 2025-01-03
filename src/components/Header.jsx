@@ -1,14 +1,34 @@
-import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useAppContext } from "../app/context/AppContext";
-import { MdOutlineAccountCircle, MdSearch, MdMenu } from "react-icons/md";
-import logo from "../assets/images/Lemida-logo.png";
+import {
+  MdOutlineAccountCircle,
+  MdSearch,
+  MdMenu,
+  MdAccountCircle,
+  MdLocalLibrary,
+  MdSettings,
+} from "react-icons/md";
+import { HiLogout, HiChevronDown } from "react-icons/hi";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Header = () => {
   const { activeMenu, setActiveMenu, openSearchMenu, setOpenSearchMenu } =
     useAppContext();
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
+  const location = useLocation();
+
+  const handleOpenChange = (nextOpen) => {
+    setOpen(nextOpen);
+  };
+
+  const handleLogout = async () => {
+    try {
+    } catch (e) {}
+  };
 
   const handleKeyPress = (e) => {
     if (searchQuery.trim() !== "" && e.key === "Enter") {
@@ -23,8 +43,21 @@ const Header = () => {
       setSearchQuery("");
     }
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <header className="sticky top-0 z-[999] md:px-desktop_padding sm:px-tablet_padding px-mobile_padding h-16 flex flex-row items-center justify-between w-full bg-header_background_color text-header_text_color shadow-headerShadow">
+    <header className="sticky top-0 z-[999] xl:px-desktop_padding md:px-laptop_padding sm:px-tablet_padding px-mobile_padding h-16 flex flex-row items-center justify-between w-full bg-header_background_color text-header_text_color shadow-headerShadow">
       <div className="max-lg:w-full max-lg:flex max-lg:justify-between max-lg:items-center">
         <div className="py-[17px] w-[139px] flex items-center gap-4">
           <button
@@ -60,7 +93,7 @@ const Header = () => {
           className={({ isActive }) =>
             [
               isActive
-                ? "text-nav_focus_color border-b-2 border-nav_focus_color"
+                ? "text-primary border-b-2 border-primary"
                 : "text-nav_color/85 border-b-2 border-transparent",
               "w-fit h-full flex items-center",
             ].join(" ")
@@ -68,19 +101,31 @@ const Header = () => {
         >
           Accueil
         </NavLink>
-        <NavLink
-          to="/formations"
-          className={({ isActive }) =>
-            [
-              isActive
-                ? "text-nav_focus_color border-b-2 border-nav_focus_color"
-                : "text-nav_color/85 border-b-2 border-transparent",
-              "w-fit h-full flex items-center",
-            ].join(" ")
-          }
-        >
-          Formations
-        </NavLink>
+
+        <div className="group relative h-full">
+          <p className="flex gap-1 items-center h-full cursor-pointer">
+            <span>Formations</span>
+            <HiChevronDown className="w-5 h-5 group-hover:rotate-180" />
+          </p>
+          <div className="flex-col gap-3 hidden group-hover:flex absolute top-full w-48 bg-white rounded-sm p-8 shadow-lg">
+            <NavLink
+              to="/formations/categorie/sante"
+              className="w-full h-full flex items-center justify-between gap-5 text-black hover:text-gray-400 transition-all duration-500 ease-in-out"
+            >
+              <span>Santé</span>
+              <FaLongArrowAltRight className="w-5 h-5" />
+            </NavLink>
+            <div className="w-full h-[1px] bg-slate-400" />
+            <NavLink
+              to="/formations/categorie/btp"
+              className="w-full h-full flex items-center justify-between gap-5 text-black hover:text-gray-400 transition-all duration-500 ease-in-out"
+            >
+              <span className="">BTP</span>
+              <FaLongArrowAltRight className="w-5 h-5" />
+            </NavLink>
+          </div>
+        </div>
+
         <NavLink
           to="/contact"
           className={({ isActive }) =>
@@ -94,12 +139,72 @@ const Header = () => {
         >
           Contactez-nous
         </NavLink>
+
         <NavLink
-          to="/connexion/login"
-          className="flex items-center justify-center rounded-full text-white font-medium md:text-base text-xs px-4 py-2 bg-[#5869d4] hover:bg-[#20C997] transition-all ease-in-out duration-500"
+          to="/connexion"
+          className="flex items-center justify-center rounded-full text-white font-medium md:text-base text-xs px-4 py-2 bg-primary hover:bg-secondary hover:text-primary border border-transparent hover:border-primary  transition-all ease-in-out duration-500"
         >
           Connexion
         </NavLink>
+
+        {/* <div className="relative" ref={menuRef}>
+          <button
+            className="flex items-center gap-1 hover:bg-slate-200 p-1"
+            onClick={() => setOpen(!open)}
+          >
+            <div className="flex items-center justify-center text-center w-10 h-10 p-1 cursor-pointer rounded-full text-white bg-main_color text-sm font-semibold">
+              N
+            </div>
+            <HiChevronDown className={`${open ? "rotate-180" : ""} w-5 h-5`} />
+          </button>
+
+          {open && (
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 flex flex-col bg-white border border-gray-100 rounded-md p-4 text-main text-center text-base shadow-lg z-10">
+              <div className="mb-2 border-b border-gray-100 pb-2">
+                <div className="flex flex-col items-center gap-2">
+                  <p>Nabil Yahyaoui</p>
+                </div>
+              </div>
+              <button className="rounded-md" onClick={() => setOpen(false)}>
+                <NavLink
+                  to="/compte/profil/mes-formations"
+                  className="flex items-center gap-2 w-full hover:bg-gray-100 px-4 py-2 rounded-md"
+                >
+                  <MdLocalLibrary className="w-5 h-5" />
+                  <span className="whitespace-nowrap">Mes formations</span>
+                </NavLink>
+              </button>
+              <button className="rounded-md" onClick={() => setOpen(false)}>
+                <NavLink
+                  to="/compte/profil"
+                  className="flex items-center gap-2 w-full hover:bg-gray-100 px-4 py-2 rounded-md"
+                >
+                  <MdAccountCircle className="w-5 h-5" />
+                  <span>Mon compte</span>
+                </NavLink>
+              </button>
+              <button className="rounded-md" onClick={() => setOpen(false)}>
+                <NavLink
+                  to="/compte/profil/modifier-mot-de-passe"
+                  className="flex items-center gap-2 w-full hover:bg-gray-100 px-4 py-2 rounded-md"
+                >
+                  <MdSettings className="w-5 h-5" />
+                  <span className="whitespace-nowrap">Paramètres</span>
+                </NavLink>
+              </button>
+              <button
+                onClick={() => {
+                  setOpen(false);
+                  handleLogout();
+                }}
+                className="cursor-pointer rounded-md hover:bg-gray-100 px-4 py-2 flex gap-2 items-center"
+              >
+                <HiLogout className="w-5 h-5" />
+                <span>Déconnexion</span>
+              </button>
+            </div>
+          )}
+        </div> */}
       </div>
 
       <div className="lg:flex hidden w-[264px] h-10 ml-6">

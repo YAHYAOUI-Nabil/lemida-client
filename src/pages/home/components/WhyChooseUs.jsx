@@ -4,7 +4,7 @@ import { features } from "../../../assets/data/features";
 const WhyChooseUs = () => {
   return (
     <div className="bg-gray-100 mb-16 w-full py-16">
-      <div className="md:px-desktop_padding sm:px-tablet_padding px-mobile_padding">
+      <div className="xl:px-desktop_padding md:px-laptop_padding sm:px-tablet_padding px-mobile_padding">
         <div className="flex flex-col items-center text-center">
           <p className="mt-2 font-bold md:text-3xl text-xl">
             Nos Engagements pour Votre Réussite
@@ -32,10 +32,10 @@ const WhyChooseUs = () => {
                   <feature.icon className="h-8 w-8" />
                 </div>
                 <div className="sm:min-w-0 sm:flex-1">
-                  <p className="text-lg max-sm:text-center font-semibold leading-8 text-gray-900">
+                  <p className="text-lg lg:text-left md:text-center sm:text-left text-center font-semibold leading-8 text-gray-900">
                     {feature.name}
                   </p>
-                  <p className="mt-2 text-base leading-7 text-gray-600 max-sm:text-center">
+                  <p className="mt-2 text-base leading-7 text-gray-600 lg:text-left md:text-center sm:text-left text-center">
                     {feature.description}
                   </p>
                 </div>

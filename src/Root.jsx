@@ -3,15 +3,19 @@ import "./App.css";
 import React from "react";
 import { AppContextProvider } from "./app/context/AppContext";
 import App from "./App";
+import { Provider } from "react-redux";
+import store from "./app/store";
 
 function Root() {
   return (
     <AppContextProvider>
-      <BrowserRouter>
-        <React.Suspense fallback={null}>
-          <App />
-        </React.Suspense>
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <React.Suspense fallback={null}>
+            <App />
+          </React.Suspense>
+        </BrowserRouter>
+      </Provider>
     </AppContextProvider>
   );
 }

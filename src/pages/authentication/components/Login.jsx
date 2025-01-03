@@ -1,13 +1,12 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-// import { useLoginMutation } from "../../app/api/public/auth";
 import { NavLink, useNavigate } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { setCurrentUser } from "../../app/store/authSlice";
 import { useEffect, useState } from "react";
-// import { useAuth } from "../../app/hooks/useAuth";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { useManualSignInMutation } from "../../../app/api/public/auth";
+import { setCurrentUser } from "../../../app/store/auth";
+import { useDispatch } from "react-redux";
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
@@ -15,10 +14,9 @@ const schema = yup.object().shape({
 });
 
 const Login = () => {
-  // const auth = useAuth();
-  // const [login, { isLoading }] = useLoginMutation();
+  const [manualSignIn, { isLoading }] = useManualSignInMutation();
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -37,9 +35,8 @@ const Login = () => {
 
   const submit = async (values) => {
     try {
-      console.log(values);
-      // const user = await login(values).unwrap();
-      // dispatch(setCurrentUser(user));
+      const user = await manualSignIn(values).unwrap();
+      dispatch(setCurrentUser(user));
       // navigate("/");
     } catch (error) {
       setError("email", {
@@ -113,12 +110,12 @@ const Login = () => {
         <div>
           <button
             type="submit"
-            disabled={false}
+            disabled={isLoading}
             className={`w-full rounded-md bg-main_color hover:bg-[#20C997] transition-all duration-500 ease-in-out p-2 text-white text-base font-medium ${
-              false && "cursor-not-allowed"
+              isLoading && "cursor-not-allowed"
             }`}
           >
-            {false ? "Chargement..." : "Se connecter"}
+            {isLoading ? "Chargement..." : "Se connecter"}
           </button>
         </div>
       </form>
