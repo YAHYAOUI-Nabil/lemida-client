@@ -64,3 +64,69 @@ export const trainings = [
     instructors: "Jean-François Renucci",
   },
 ];
+
+export const btpTrainings = [
+  {
+    id: 0,
+    image:
+      "https://tmr.tn/wp-content/uploads/2019/07/TRACTOPELLE-MANOUBA-07-01.jpg",
+    title: "CACES R482 catégorie A, B1 et F",
+    duration: "24H",
+    instructors: "Jean-François Renucci",
+  },
+  {
+    id: 1,
+    image:
+      "https://www.arbor-ag.ch/upload/shop/productimages/1024/Optimum%2081.jfif",
+    title: "CACES R486 catégorie A et B",
+    duration: "20H",
+    instructors: "Jean-François Renucci",
+  },
+  {
+    id: 2,
+    image:
+      "https://metafor-france.fr/wp-content/uploads/2024/09/Affiche-site-internet-16.png",
+    title: "CACES R489 catégorie 1A, 3 et 5",
+    duration: "24H",
+    instructors: "Jean-François Renucci",
+  },
+  {
+    id: 3,
+    image: "https://www.kmc.tn/wp-content/uploads/2020/11/img2.jpg",
+    title: "Echafaudage roulant",
+    duration: "12H",
+    instructors: "Jean-François Renucci",
+  },
+  {
+    id: 4,
+    image:
+      "https://static.wixstatic.com/media/c0fc22_48c4bb2f0775498faaffff454ef15067~mv2.jpg/v1/fill/w_568,h_852,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c0fc22_48c4bb2f0775498faaffff454ef15067~mv2.jpg",
+    title: "Montage démontage échafaudage fixe R408",
+    duration: "18H",
+    instructors: "Jean-François Renucci",
+  },
+  {
+    id: 5,
+    image:
+      "https://btselectrotechniqueeiffelbdx.weebly.com/uploads/1/0/7/7/10775724/img-20170929-092303_orig.jpg",
+    title: "Habilitations électriques B1V, B2V, BR, BC, BE, H1V, B2V, HE, HC",
+    duration: "14H",
+    instructors: "Jean-François Renucci",
+  },
+  {
+    id: 6,
+    image:
+      "https://www.formadok.fr/wp-content/uploads/2024/02/developpement-durable-en-entreprise-1-1.png",
+    title: "Mise en oeuvre du développement durable dans les TPE PME",
+    duration: "30H",
+    instructors: "Jean-François Renucci",
+  },
+  {
+    id: 7,
+    image:
+      "https://thumbs.dreamstime.com/b/hommes-au-travail-sur-la-colonne-de-l-%C3%A9lectricit%C3%A9-en-uniforme-%C3%A9lectrique-170822598.jpg",
+    title: "Travail en hauteur",
+    duration: "8H",
+    instructors: "Jean-François Renucci",
+  },
+];

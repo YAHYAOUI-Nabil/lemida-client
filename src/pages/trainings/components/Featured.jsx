@@ -3,7 +3,7 @@ import { FaEuroSign, FaChalkboardTeacher } from "react-icons/fa";
 import { MdTimer, MdOutlineSupportAgent } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
-const Featured = () => {
+const Featured = ({ training }) => {
   return (
     <div className="flex flex-col gap-6">
       <div className="">
@@ -16,7 +16,7 @@ const Featured = () => {
       <div className="group w-full border border-gray-200 md:p-8 p-4 grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-4 cursor-pointer hover:bg-gray-100">
         <div className="col-span-1 w-full h-full min-h-72 flex overflow-hidden relative">
           <img
-            src="https://www.roswellpark.org/sites/default/files/2024-04/adobestock_591820473.jpeg"
+            src={training?.image}
             alt="Placeholder"
             className="absolute inset-0 col-span-1 object-cover w-full h-full min-h-80"
           />
@@ -27,7 +27,7 @@ const Featured = () => {
               to="/"
               className="md:text-xl text-base font-semibold max-w-96 mb-2 text-gray-600 text-left"
             >
-              Formation Facteurs de risques cardiovasculaires
+              {training?.title}
             </NavLink>
             <div className="flex flex-col gap-4 justify-between mb-3 text-gray-600 text-sm">
               <div className="flex flex-row gap-2 items-center">

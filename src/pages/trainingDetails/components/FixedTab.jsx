@@ -11,7 +11,7 @@ const FixedTab = ({
         <p className="sm:text-2xl text-lg font-bold text-gray-500">
           Formation Plaies et cicatrisation
         </p>
-        <div className="flex items-center justify-center w-fit bg-main_color text-white hover:bg-blue-900 transition-all duration-500 ease-in-out">
+        <div className="flex items-center justify-center w-fit bg-main_color text-white hover:bg-secondary hover:text-primary border border-transparent hover:border-primary transition-all duration-500 ease-in-out">
           <button
             className="px-10 py-5 text-base font-semibold"
             onClick={() => setShowInscriptionForm(true)}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Popular from "./Popular";
 import Recent from "./Recent";
 
-const TopRated = () => {
+const TopRated = ({ trainings }) => {
   const [toggleResults, setToggleResults] = useState("popular");
   return (
     <div className="flex flex-col gap-6">
@@ -37,7 +37,11 @@ const TopRated = () => {
           Les plus récentes
         </button>
       </div>
-      {toggleResults === "popular" ? <Popular /> : <Recent />}
+      {toggleResults === "popular" ? (
+        <Popular trainings={trainings} />
+      ) : (
+        <Recent trainings={trainings} />
+      )}
     </div>
   );
 };

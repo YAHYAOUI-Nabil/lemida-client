@@ -157,9 +157,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex sm:flex-row flex-col sm:justify-between items-center py-5 border-t">
-        <p className="text-sm font-medium pl-1">
-          &copy; {currentDate} LNR Finance.
-        </p>
+        <p className="text-sm font-medium pl-1">&copy; {currentDate} Lemida.</p>
         <div className="flex items-center mt-4 space-x-4 sm:mt-0 pl-1 sm:pl-0 sm:pr-1">
           <a
             href="https://www.facebook.com/@lemida"

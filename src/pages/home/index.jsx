@@ -10,7 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Timeline from "./components/Timeline";
 import { btpAdvisors, medicalAdvisors } from "../../assets/data/advisors";
-import { trainings } from "../../assets/data/trainings";
+import { trainings, btpTrainings } from "../../assets/data/trainings";
 import Slider from "./components/Slider";
 
 AOS.init({ duration: 1000 });
@@ -39,7 +39,7 @@ const Home = () => {
       <MostSeenTrainings
         title="Nos formations essentielles pour les professionnels du bâtiment !"
         description="Explorez notre sélection de formations clés pour développer vos compétences techniques et mener à bien vos projets dans le secteur de la construction."
-        trainings={trainings}
+        trainings={btpTrainings}
       />
       <Advisors
         label="Profitez de l’expertise de professionnels aguerris"

@@ -17,12 +17,26 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="relative z-10 text-left p-6 bg-black/50 rounded-lg shadow-lg">
+      <div className="absolute bottom-5 left-5 z-20 pointer-events-none w-1/2 h-1/2 shadow-xl">
+        <img
+          src="/images/login-hero-2.jpg"
+          alt="contact-us"
+          className="w-full h-full object-cover shadow-xl"
+        />
+      </div>
+      <div className="absolute top-5 right-5 z-20 pointer-events-none w-1/2 h-1/2 shadow-lg">
+        <img
+          src="/images/login-hero-1.jpg"
+          alt="contact-us"
+          className="w-full h-full object-cover shadow-lg"
+        />
+      </div>
+      <div className="relative z-30 text-left p-6 bg-black/50 rounded-lg shadow-lg">
         <h1 className="text-4xl font-bold mb-4">Bienvenue !</h1>
         <p className="text-left text-base font-medium">
-          Des formations organisées et intuitives, conçues pour les
-          professionnels de santé. Rejoignez-nous dès aujourd'hui et continuez à
-          développer vos compétences.
+          Des formations claires et intuitives, spécialement conçues pour les
+          professionnels de la santé et du bâtiment. Rejoignez-nous dès
+          aujourd'hui pour enrichir vos compétences !
         </p>
       </div>
     </div>

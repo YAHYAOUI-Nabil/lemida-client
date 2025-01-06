@@ -1,8 +1,7 @@
 import React from "react";
-import { trainings } from "../../../assets/data/trainings";
 import Card from "../../../components/Card";
 
-const TrainingList = () => {
+const TrainingList = ({ trainings }) => {
   return (
     <div className="grid 2xl:grid-cols-5 xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3">
       {trainings.slice(1, 8).map((training) => (

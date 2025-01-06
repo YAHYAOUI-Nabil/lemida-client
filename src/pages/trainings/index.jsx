@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TopRated from "./components/TopRated";
 import Featured from "./components/Featured";
 import AllTrainings from "./components/AllTrainings";
 import { useLocation } from "react-router-dom";
+import { btpTrainings, trainings } from "../../assets/data/trainings";
 
 const Trainings = () => {
   const location = useLocation();
+  const [trainingsList, setTrainingsList] = useState([]);
+
+  useEffect(() => {
+    if (location.pathname === "/formations/categorie/sante") {
+      setTrainingsList(trainings);
+    } else {
+      setTrainingsList(btpTrainings);
+    }
+  }, [location]);
   return (
     <div className="md:px-desktop_padding sm:px-tablet_padding px-mobile_padding py-16 flex flex-col gap-14">
       {location.pathname === "/formations/categorie/sante" ? (
@@ -32,9 +42,9 @@ const Trainings = () => {
         </div>
       )}
 
-      <TopRated />
-      <Featured />
-      <AllTrainings />
+      <TopRated trainings={trainingsList} />
+      <Featured training={trainingsList[0]} />
+      <AllTrainings trainings={trainingsList} />
     </div>
   );
 };

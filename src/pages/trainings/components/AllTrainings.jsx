@@ -2,7 +2,7 @@ import React from "react";
 import TrainingList from "./TrainingList";
 import Filter from "./Filter";
 
-const AllTrainings = () => {
+const AllTrainings = ({ trainings }) => {
   return (
     <div className="flex flex-col gap-10 w-full">
       <div className="">
@@ -16,7 +16,7 @@ const AllTrainings = () => {
       </div>
       <div className="flex lg:flex-row flex-col lg:gap-4 gap-8 w-full">
         <Filter />
-        <TrainingList />
+        <TrainingList trainings={trainings} />
       </div>
     </div>
   );

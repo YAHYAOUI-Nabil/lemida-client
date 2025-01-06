@@ -51,7 +51,7 @@ const Program = () => {
                   >
                     <path
                       d="M14.75 8.375L8 1.625L1.25 8.375"
-                      stroke="#2234a8"
+                      stroke="#114d5b"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -67,7 +67,7 @@ const Program = () => {
                   >
                     <path
                       d="M1.25 1.625L8 8.375L14.75 1.625"
-                      stroke="#2234a8"
+                      stroke="#114d5b"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -121,7 +121,7 @@ const Program = () => {
                   >
                     <path
                       d="M14.75 8.375L8 1.625L1.25 8.375"
-                      stroke="#2234a8"
+                      stroke="#114d5b"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -137,7 +137,7 @@ const Program = () => {
                   >
                     <path
                       d="M1.25 1.625L8 8.375L14.75 1.625"
-                      stroke="#2234a8"
+                      stroke="#114d5b"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -191,7 +191,7 @@ const Program = () => {
                   >
                     <path
                       d="M14.75 8.375L8 1.625L1.25 8.375"
-                      stroke="#2234a8"
+                      stroke="#114d5b"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -207,7 +207,7 @@ const Program = () => {
                   >
                     <path
                       d="M1.25 1.625L8 8.375L14.75 1.625"
-                      stroke="#2234a8"
+                      stroke="#114d5b"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -261,7 +261,7 @@ const Program = () => {
                   >
                     <path
                       d="M14.75 8.375L8 1.625L1.25 8.375"
-                      stroke="#2234a8"
+                      stroke="#114d5b"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -277,7 +277,7 @@ const Program = () => {
                   >
                     <path
                       d="M1.25 1.625L8 8.375L14.75 1.625"
-                      stroke="#2234a8"
+                      stroke="#114d5b"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
