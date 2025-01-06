@@ -75,7 +75,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={false}
-            className={`w-full rounded-md bg-main_color hover:bg-[#20C997] transition-all duration-500 ease-in-out p-2 text-white text-base font-medium ${
+            className={`w-full rounded-md bg-primary hover:bg-secondary hover:text-primary border border-transparent hover:border-primary transition-all duration-500 ease-in-out p-2 text-white text-base font-medium ${
               false && "cursor-not-allowed"
             }`}
           >
