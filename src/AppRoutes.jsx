@@ -23,6 +23,16 @@ const CandidateEnrolledTrainings = React.lazy(() =>
 const CandidateUpdatePassword = React.lazy(() =>
   import("./pages/candidateDashboard/updatePassword")
 );
+const Authentication = React.lazy(() => import("./pages/authentication"));
+const Login = React.lazy(() =>
+  import("./pages/authentication/components/Login")
+);
+const Register = React.lazy(() =>
+  import("./pages/authentication/components/Register")
+);
+const ForgotPassword = React.lazy(() =>
+  import("./pages/authentication/components/ForgotPassword")
+);
 
 const AppRoutes = () => {
   return (
@@ -113,6 +123,11 @@ const AppRoutes = () => {
           path="modifier-mot-de-passe"
           element={<CandidateUpdatePassword />}
         />
+      </Route>
+      <Route path="/connexion" element={<Authentication />}>
+        <Route index element={<Login />} />
+        <Route path="inscrire" element={<Register />} />
+        <Route path="mot-de-passe-oublie" element={<ForgotPassword />} />
       </Route>
     </Routes>
   );

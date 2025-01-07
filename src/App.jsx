@@ -9,17 +9,9 @@ const App = () => {
   const location = useLocation();
 
   return (
-    <React.Fragment>
-      {location.pathname.includes("connexion") ? (
-        <React.Suspense fallback={<LoadingSpinner />}>
-          <AuthenticationApp />
-        </React.Suspense>
-      ) : (
-        <React.Suspense fallback={<LoadingSpinner />}>
-          <MainApp />
-        </React.Suspense>
-      )}
-    </React.Fragment>
+    <React.Suspense fallback={<LoadingSpinner />}>
+      <MainApp />
+    </React.Suspense>
   );
 };
 
