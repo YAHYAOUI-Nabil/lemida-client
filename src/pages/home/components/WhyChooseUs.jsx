@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
           <p className="mt-2 font-bold md:text-3xl text-xl">
             Nos Engagements pour Votre Réussite
           </p>
-          <p className="mt-6 md:max-w-5xl text-lg text-gray-600">
+          <p className="mt-6 max-w-6xl text-lg text-gray-600">
             Explorez ce qui fait la singularité de notre plateforme et pourquoi
             elle est choisie par des milliers d'apprenants pour atteindre leurs
             objectifs professionnels et personnels. Nous mettons à votre
@@ -21,8 +21,8 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="md:mt-16 mt-8 w-full">
-          <div className="grid grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
+        <div className="md:mt-16 mt-8 w-full flex justify-center">
+          <div className="grid grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-12 md:gap-y-16 max-w-5xl">
             {features.map((feature, index) => (
               <div
                 key={feature.name}

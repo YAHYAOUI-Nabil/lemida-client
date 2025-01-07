@@ -29,17 +29,17 @@ const Slider = () => {
               loop
               muted
             >
-              <source src="/videos/hero.mp4" type="video/mp4" />
+              <source src="/videos/medic.mp4" type="video/mp4" />
             </video>
             <div className="absolute mx-auto my-auto top-0 xl:px-desktop_padding md:px-laptop_padding sm:px-tablet_padding px-mobile_padding w-full h-full flex items-center justify-center">
               <div className="flex flex-col justify-center items-center relative">
-                <p className="font-bold md:text-3xl text-xl text-center text-white">
+                <p className="font-bold md:text-3xl text-xl text-center text-gray-600">
                   Rejoignez notre communauté d'apprenants aujourd'hui !
                 </p>
-                <p className="md:h-[86px] h-[43px] md:mb-0 mb-3.5 font-bold md:text-[42px] text-[21px] md:leading-[90px] leading-[45px] text-secondary text-center ">
+                <p className="md:h-[86px] h-[43px] md:mb-0 mb-3.5 font-bold md:text-[42px] text-[21px] md:leading-[90px] leading-[45px] text-primary text-center ">
                   Votre succès, notre priorité !
                 </p>
-                <p className="font-medium text-base text-white text-center md:w-[581px] md:mb-11 mb-6">
+                <p className="font-medium text-base text-gray-600 text-center md:w-[581px] md:mb-11 mb-6">
                   Accédez à des formations certifiées de haute qualité, créées
                   par des experts renommés, et propulsez votre carrière avec des
                   compétences recherchées et reconnues par les employeurs

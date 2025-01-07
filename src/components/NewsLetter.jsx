@@ -3,6 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import * as Toast from "@radix-ui/react-toast";
+import { MdEmail } from "react-icons/md";
 
 const schema = yup.object().shape({
   email: yup
@@ -36,37 +37,44 @@ const NewsLetter = () => {
 
   return (
     <Toast.Provider swipeDirection="right">
-      <section className="sm:px[282px] px-mobile_padding py-[34px] max-lg:pb-[32px] bg-[#F6F6F6] relative">
-        <div className="flex flex-col gap-4 items-center py-5">
-          <div className="flex flex-col items-center">
-            <p className="md:text-2xl text-lg md:leading-[46px] leading-[37px] font-semibold text-center">
-              Inscrivez-vous à notre newsletter
-            </p>
-            <p className="md:w-[518px] md:text-base text-sm leading-7 font-normal text-center">
-              Et tenez-vous au courant de nos actualités, nos dernières
-              formations et des meilleurs astuces pour vous former !
-            </p>
-          </div>
-          <div className="md:w-[682px] w-[350px]">
-            <form
-              className="flex flex-col gap-4"
-              onSubmit={handleSubmit(submit)}
-            >
-              <input
-                type="email"
-                className={`${
-                  errors.email && "border border-red-600"
-                } w-full h-[50px] px-4 py-2 rounded-[30px] bg-white focus:outline-none`}
-                placeholder="Entrez votre adresse email"
-                {...register("email")}
-              />
-              <button
-                type="submit"
-                className="w-full h-[50px] px-[15px] py-1.5 rounded-full bg-primary hover:bg-secondary hover:text-primary border border-transparent hover:border-primary transition-all duration-500 ease-in-out font-medium text-white"
+      <section className="flex justify-center xl:px-desktop_padding md:px-laptop_padding sm:px-tablet_padding px-mobile_padding py-16 relative bg-white w-full">
+        <div className="relative lg:overflow-hidden md:max-h-80 flex flex-row justify-between gap-4 sm:p-12 p-10 items-center bg-orange-400 w-full max-w-6xl rounded-xl">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col items-start">
+              <p className="md:text-2xl text-lg md:leading-[46px] leading-[37px] font-semibold text-left">
+                Inscrivez-vous à notre newsletter
+              </p>
+              <p className="md:w-[518px] md:text-base text-sm leading-7 font-normal text-left">
+                Et tenez-vous au courant de nos actualités, nos dernières
+                formations et des meilleurs astuces pour vous former !
+              </p>
+            </div>
+            <div className="">
+              <form
+                className="flex md:flex-row flex-col gap-2"
+                onSubmit={handleSubmit(submit)}
               >
-                S'inscrire
-              </button>
-            </form>
+                <input
+                  type="email"
+                  className={`${
+                    errors.email && "border border-red-600"
+                  } w-full lg:max-w-sm h-[50px] px-4 py-2 rounded-md bg-white focus:outline-none`}
+                  placeholder="Entrez votre adresse email"
+                  {...register("email")}
+                />
+                <button
+                  type="submit"
+                  className="md:w-fit w-full h-[50px] px-[15px] py-1.5 rounded-md bg-orange-500 hover:bg-white hover:text-orange-500 border border-transparent hover:border-orange-500 transition-all duration-500 ease-in-out font-medium text-white"
+                >
+                  S'inscrire
+                </button>
+              </form>
+            </div>
+          </div>
+          <div className="absolute z-20 lg:-right-48 right-6 lg:-top-1/2 -top-12 xl:w-[550px] xl:h-[550px] lg:w-[450px] lg:h-[450px] w-24 h-24 rounded-full bg-orange-500">
+            <div className="flex justify-center items-center absolute max-lg:inset-0 lg:left-1/4 xl:top-[calc(50%-96px)] lg:top-[calc(50%-56px)] z-30">
+              <MdEmail className="xl:w-40 xl:h-40 lg:w-32 lg:h-32 w-12 h-12 text-white rotate-45" />
+            </div>
           </div>
         </div>
       </section>

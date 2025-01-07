@@ -1,17 +1,16 @@
 import React from "react";
-import Hero from "./components/Hero";
 import MostSeenTrainings from "./components/MostSeenTrainings";
 import Testimonial from "./components/Testimonial";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Advisors from "./components/Advisors";
 import TopCategories from "./components/TopCategories";
-import NextTrainings from "./components/NextTrainings";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Timeline from "./components/Timeline";
 import { btpAdvisors, medicalAdvisors } from "../../assets/data/advisors";
 import { trainings, btpTrainings } from "../../assets/data/trainings";
 import Slider from "./components/Slider";
+import Categories from "./components/Categories";
 
 AOS.init({ duration: 1000 });
 AOS.refresh();
@@ -19,10 +18,9 @@ AOS.refresh();
 const Home = () => {
   return (
     <section className="flex flex-col">
-      {/* <Hero /> */}
       <Slider />
-      {/* <NextTrainings /> */}
-      <TopCategories />
+      <Categories />
+      {/* <TopCategories /> */}
       <WhyChooseUs />
       <MostSeenTrainings
         title="Nos formations incontournables pour les professionnels de santé !"

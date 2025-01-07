@@ -3,6 +3,7 @@ import {
   MdOutlineBabyChangingStation,
   MdPregnantWoman,
   MdElectricBolt,
+  MdAccountBalanceWallet,
 } from "react-icons/md";
 import {
   FaBaby,
@@ -30,9 +31,13 @@ import {
   TbForklift,
   TbCarCrane,
   TbCar4WdFilled,
+  TbContract,
+  TbBriefcaseFilled,
 } from "react-icons/tb";
-import { PiLadderSimpleLight } from "react-icons/pi";
+import { PiLadderSimpleLight, PiMicrosoftWordLogoFill } from "react-icons/pi";
 import { LuCable } from "react-icons/lu";
+import { SiPaloaltosoftware } from "react-icons/si";
+import { AiFillPrinter } from "react-icons/ai";
 
 export const medicalCategories = [
   {
@@ -47,21 +52,31 @@ export const medicalCategories = [
     name: "Podologues",
     icon: GiFootprint,
   },
-  {
-    name: "Médecins généralistes",
-    icon: LiaStethoscopeSolid,
-  },
+
   {
     name: "Cardiologues",
     icon: FaHeartPulse,
   },
+
   {
-    name: "Masseurs kinésithérapeutes",
-    icon: TbMassage,
+    name: "Gynécologues",
+    icon: MdPregnantWoman,
+  },
+  {
+    name: "Dermatologues",
+    icon: GiMagnifyingGlass,
+  },
+  {
+    name: "Gériatres",
+    icon: TbOld,
   },
   {
     name: "Psychiatres",
     icon: RiPsychotherapyLine,
+  },
+  {
+    name: "Masseurs kinésithérapeutes",
+    icon: TbMassage,
   },
   {
     name: "Infirmiers/ères",
@@ -70,6 +85,10 @@ export const medicalCategories = [
   {
     name: "Aides-soignants",
     icon: FaHandHoldingMedical,
+  },
+  {
+    name: "Médecins généralistes",
+    icon: LiaStethoscopeSolid,
   },
   {
     name: "Chirurgiens dentistes",
@@ -83,18 +102,7 @@ export const medicalCategories = [
     name: "OrthoPhonistes",
     icon: GiDiscussion,
   },
-  {
-    name: "Gynécologues",
-    icon: MdPregnantWoman,
-  },
-  {
-    name: "Dermatologues",
-    icon: GiMagnifyingGlass,
-  },
-  {
-    name: "Gériatres",
-    icon: TbOld,
-  },
+
   {
     name: "Préparateurs en pharmacie",
     icon: GiMedicinePills,
@@ -127,7 +135,11 @@ export const btpCategories = [
     icon: TbForklift,
   },
   {
-    name: "Echafaudage roulant",
+    name: "SST",
+    icon: FaUserNurse,
+  },
+  {
+    name: "Echafaudage",
     icon: TbCar4WdFilled,
   },
   {
@@ -146,12 +158,40 @@ export const btpCategories = [
     name: "Travail en hauteur",
     icon: FaHelmetSafety,
   },
-  {
-    name: "SST",
-    icon: FaUserNurse,
-  },
+
   {
     name: "Développement durable",
     icon: FaEnvira,
+  },
+];
+
+export const administrativeCategories = [
+  {
+    name: "Secrétariat",
+    icon: TbBriefcaseFilled,
+  },
+  {
+    name: "Bureautique",
+    icon: PiMicrosoftWordLogoFill,
+  },
+  {
+    name: "Comptabilité",
+    icon: MdAccountBalanceWallet,
+  },
+  {
+    name: "Administration",
+    icon: AiFillPrinter,
+  },
+  {
+    name: "Logiciels Pro",
+    icon: SiPaloaltosoftware,
+  },
+  {
+    name: "Rédaction",
+    icon: TbContract,
+  },
+  {
+    name: "Formations en Langues (avec Leveltel et Voltaire)",
+    icon: MdElectricBolt,
   },
 ];

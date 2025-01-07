@@ -11,6 +11,11 @@ import {
 } from "react-icons/md";
 import { HiLogout, HiChevronDown } from "react-icons/hi";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import {
+  administrativeCategories,
+  btpCategories,
+  medicalCategories,
+} from "../assets/data/categories";
 
 const Header = () => {
   const { activeMenu, setActiveMenu, openSearchMenu, setOpenSearchMenu } =
@@ -87,7 +92,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="lg:flex hidden justify-end items-center xl:gap-10 gap-7 w-full h-full text-base font-normal leading-[22px]">
+      <div className="lg:flex hidden justify-end items-center xl:gap-10 gap-7 w-full h-full text-sm font-medium leading-[22px]">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -102,26 +107,159 @@ const Header = () => {
           Accueil
         </NavLink>
 
-        <div className="group relative h-full">
-          <p className="flex gap-1 items-center h-full cursor-pointer">
+        <div className="group/main relative h-full">
+          <p
+            className={`${
+              location.pathname.includes("/formations")
+                ? "border-primary text-primary"
+                : "border-transparent text-nav_color/85"
+            } flex gap-1 items-center h-full cursor-pointer border-b-2 `}
+          >
             <span>Formations</span>
+            <HiChevronDown className="w-5 h-5 group-hover/main:rotate-180" />
+          </p>
+          <div className="flex-col hidden group-hover/main:flex absolute top-full w-80 bg-white rounded-sm shadow-lg whitespace-nowrap">
+            <div className="group/item relative px-8 py-5">
+              <NavLink
+                to="/formations/categorie/sante"
+                className="w-full h-full flex items-center justify-between gap-5 text-black group-hover/item:text-gray-400 transition-all duration-500 ease-in-out"
+              >
+                <span>Santé</span>
+                <FaLongArrowAltRight className="group-hover/item:flex hidden w-5 h-5" />
+              </NavLink>
+              <div className="absolute left-full top-0 hidden group-hover/item:grid grid-cols-3 px-8 py-5 w-[500px] gap-y-8 bg-white whitespace-normal">
+                {medicalCategories.map((category) => (
+                  <div
+                    key={category.name}
+                    className="col-span-1 flex justify-center text-center hover:text-gray-400"
+                  >
+                    <NavLink
+                      to={`formations/recherches?categorie=${category.name}`}
+                    >
+                      {category.name}
+                    </NavLink>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="w-full h-[1px] bg-slate-400" />
+            <div className="group/item relative px-8 py-5">
+              <NavLink
+                to="/formations/categorie/btp"
+                className="w-full h-full flex items-center justify-between gap-5 text-black group-hover/item:text-gray-400 transition-all duration-500 ease-in-out"
+              >
+                <span className="">BTP</span>
+                <FaLongArrowAltRight className="group-hover/item:flex hidden w-5 h-5" />
+              </NavLink>
+              <div className="absolute left-full top-0 hidden group-hover/item:grid grid-cols-3 px-8 py-5 w-[500px] gap-y-8 bg-white whitespace-normal">
+                {btpCategories.map((category) => (
+                  <div
+                    key={category.name}
+                    className="col-span-1 flex justify-center text-center hover:text-gray-400"
+                  >
+                    <NavLink
+                      to={`formations/recherches?categorie=${category.name}`}
+                    >
+                      {category.name}
+                    </NavLink>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="w-full h-[1px] bg-slate-400" />
+            <div className="group/item relative px-8 py-5">
+              <NavLink
+                to="/formations/categorie/juridique-et-administrative"
+                className="w-full h-full flex items-center justify-between gap-5 text-black group-hover/item:text-gray-400 transition-all duration-500 ease-in-out"
+              >
+                <span className="">Juridique et Administrative</span>
+                <FaLongArrowAltRight className="group-hover/item:flex hidden w-5 h-5" />
+              </NavLink>
+              <div className="absolute left-full top-0 hidden group-hover/item:grid grid-cols-3 px-8 py-5 w-[500px] gap-y-8 bg-white whitespace-normal">
+                {administrativeCategories.map((category) => (
+                  <div
+                    key={category.name}
+                    className="col-span-1 flex justify-center text-center hover:text-gray-400"
+                  >
+                    <NavLink
+                      to={`formations/recherches?categorie=${category.name}`}
+                    >
+                      {category.name}
+                    </NavLink>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <NavLink
+          to="/a-propos"
+          className={({ isActive }) =>
+            [
+              isActive
+                ? "text-primary border-b-2 border-primary"
+                : "text-nav_color/85 border-b-2 border-transparent",
+              "w-fit h-full flex items-center",
+            ].join(" ")
+          }
+        >
+          Qui sommes-nous?
+        </NavLink>
+
+        <div className="group relative h-full">
+          <p
+            className={`${
+              location.pathname.includes("/financements")
+                ? "border-primary text-primary"
+                : "border-transparent text-nav_color/85"
+            } flex gap-1 items-center h-full cursor-pointer border-b-2 `}
+          >
+            <span>Financements</span>
             <HiChevronDown className="w-5 h-5 group-hover:rotate-180" />
           </p>
-          <div className="flex-col gap-3 hidden group-hover:flex absolute top-full w-48 bg-white rounded-sm p-8 shadow-lg">
+          <div className="flex-col gap-3 hidden group-hover:flex absolute top-full w-fit bg-white rounded-sm px-8 py-5 shadow-lg whitespace-nowrap">
             <NavLink
-              to="/formations/categorie/sante"
+              to="/financements/dpc"
               className="w-full h-full flex items-center justify-between gap-5 text-black hover:text-gray-400 transition-all duration-500 ease-in-out"
             >
-              <span>Santé</span>
-              <FaLongArrowAltRight className="w-5 h-5" />
+              <span>DPC</span>
             </NavLink>
-            <div className="w-full h-[1px] bg-slate-400" />
             <NavLink
-              to="/formations/categorie/btp"
+              to="/financements/opco"
               className="w-full h-full flex items-center justify-between gap-5 text-black hover:text-gray-400 transition-all duration-500 ease-in-out"
             >
-              <span className="">BTP</span>
-              <FaLongArrowAltRight className="w-5 h-5" />
+              <span className="">OPCO</span>
+            </NavLink>
+            <NavLink
+              to="/financements/fif-pl"
+              className="w-full h-full flex items-center justify-between gap-5 text-black hover:text-gray-400 transition-all duration-500 ease-in-out"
+            >
+              <span className="">FIF PL</span>
+            </NavLink>
+            <NavLink
+              to="/financements/faf-pm"
+              className="w-full h-full flex items-center justify-between gap-5 text-black hover:text-gray-400 transition-all duration-500 ease-in-out"
+            >
+              <span className="">FAF PM</span>
+            </NavLink>
+            <NavLink
+              to="/financements/pole-emploi"
+              className="w-full h-full flex items-center justify-between gap-5 text-black hover:text-gray-400 transition-all duration-500 ease-in-out"
+            >
+              <span className="">Pôle Emploi</span>
+            </NavLink>
+            <NavLink
+              to="/financements/employeur"
+              className="w-full h-full flex items-center justify-between gap-5 text-black hover:text-gray-400 transition-all duration-500 ease-in-out"
+            >
+              <span className="">Employeur</span>
+            </NavLink>
+            <NavLink
+              to="/financements/financement-personnel"
+              className="w-full h-full flex items-center justify-between gap-5 text-black hover:text-gray-400 transition-all duration-500 ease-in-out"
+            >
+              <span className="">Financement Personnel</span>
             </NavLink>
           </div>
         </div>
@@ -142,7 +280,7 @@ const Header = () => {
 
         <NavLink
           to="/connexion"
-          className="flex items-center justify-center rounded-full text-white font-medium md:text-base text-xs px-4 py-2 bg-primary hover:bg-secondary hover:text-primary border border-transparent hover:border-primary  transition-all ease-in-out duration-500"
+          className="flex items-center justify-center rounded-full text-white font-medium text-sm px-4 py-2 bg-primary hover:bg-secondary hover:text-primary border border-transparent hover:border-primary  transition-all ease-in-out duration-500"
         >
           Connexion
         </NavLink>
@@ -207,7 +345,7 @@ const Header = () => {
         </div> */}
       </div>
 
-      <div className="lg:flex hidden w-[264px] h-10 ml-6">
+      {/* <div className="lg:flex hidden w-[264px] h-10 ml-6">
         <div className="flex flex-row justify-between items-center bg-white rounded-[20px]">
           <div className="flex items-center h-10 py-2 px-3 z-20 border border-[#E7E7E7] rounded-l-[20px]">
             <input
@@ -237,7 +375,7 @@ const Header = () => {
             </svg>
           </button>
         </div>
-      </div>
+      </div> */}
     </header>
   );
 };

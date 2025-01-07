@@ -27,8 +27,17 @@ const Footer = () => {
 
           <div className="mt-4 lg:max-w-sm">
             <p className="text-sm font-medium">
-              Découvrez nos formations et développez vos compétences dès
-              aujourd'hui.
+              Lemida est un organisme de formation dédié à la montée en
+              compétences des professionnels et des entreprises. En combinant
+              expertise et pédagogie innovante, nous proposons des formations
+              adaptées aux exigences actuelles du marché et aux besoins
+              spécifiques de chaque apprenant.
+              <br /> <br /> Nos formations, reconnues et éligibles aux
+              principaux dispositifs de financement (CPF, OPCO, Pôle Emploi,
+              AGEFIPH, FIPHFP), permettent à chacun de progresser et de
+              transformer ses ambitions en réussite concrète. <br />
+              <br /> Avec Lemida, développez vos compétences pour relever les
+              défis d'aujourd'hui et de demain.
             </p>
           </div>
           <div className="flex flex-col gap-2">
@@ -55,7 +64,7 @@ const Footer = () => {
               <li>
                 <NavLink
                   to="/formations/categorie/sante"
-                  className="transition-opacity duration-100 hover:opacity-80"
+                  className="transition-opacity duration-100 hover:opacity-80 hover:underline"
                 >
                   Santé
                 </NavLink>
@@ -63,7 +72,7 @@ const Footer = () => {
               <li>
                 <NavLink
                   to="/formations/categorie/btp"
-                  className="transition-opacity duration-100 hover:opacity-80"
+                  className="transition-opacity duration-100 hover:opacity-80 hover:underline"
                 >
                   Bâtiment
                 </NavLink>
@@ -71,7 +80,7 @@ const Footer = () => {
               <li>
                 <NavLink
                   to="/a-propos"
-                  className="transition-opacity duration-100 hover:opacity-80"
+                  className="transition-opacity duration-100 hover:opacity-80 hover:underline"
                 >
                   À propos
                 </NavLink>
@@ -79,7 +88,7 @@ const Footer = () => {
               <li>
                 <NavLink
                   to="/contact"
-                  className="transition-opacity duration-100 hover:opacity-80"
+                  className="transition-opacity duration-100 hover:opacity-80 hover:underline"
                 >
                   Contactez-nous
                 </NavLink>
@@ -114,7 +123,7 @@ const Footer = () => {
               <li>
                 <NavLink
                   to="/politiques-de-confidentialite"
-                  className="transition-opacity duration-100 hover:opacity-80"
+                  className="transition-opacity duration-100 hover:opacity-80 hover:underline"
                 >
                   Politique de confidentialité
                 </NavLink>
@@ -122,7 +131,7 @@ const Footer = () => {
               <li>
                 <NavLink
                   to="/conditions-generales"
-                  className="transition-opacity duration-100 hover:opacity-80"
+                  className="transition-opacity duration-100 hover:opacity-80 hover:underline"
                 >
                   Conditions générales
                 </NavLink>
@@ -130,7 +139,7 @@ const Footer = () => {
               <li>
                 <NavLink
                   to="/mentions-legales"
-                  className="transition-opacity duration-100 hover:opacity-80"
+                  className="transition-opacity duration-100 hover:opacity-80 hover:underline"
                 >
                   Mentions légales
                 </NavLink>
