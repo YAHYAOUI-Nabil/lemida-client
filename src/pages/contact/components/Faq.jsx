@@ -5,19 +5,21 @@ const Item = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border rounded shadow-sm">
+    <div className="border rounded shadow-sm bg-primary">
       <button
         type="button"
         aria-label="Open item"
         title="Open item"
-        className="flex gap-2 items-center justify-between w-full p-4 focus:outline-none"
+        className="flex gap-2 items-center justify-between w-full p-8 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <p className="text-md text-left font-medium w-11/12">{title}</p>
-        <div className="flex items-center justify-center w-8 h-8 border rounded-full">
+        <p className="text-md text-left font-medium w-11/12 text-white">
+          {title}
+        </p>
+        <div className="flex items-center justify-center w-8 h-8 border border-orange-400 rounded-full">
           <svg
             viewBox="0 0 24 24"
-            className={`w-3 text-gray-600 transition-transform duration-200 ${
+            className={`w-3 text-orange-400 transition-transform duration-200 ${
               isOpen ? "transform rotate-180" : ""
             }`}
           >
@@ -34,8 +36,8 @@ const Item = ({ title, children }) => {
         </div>
       </button>
       {isOpen && (
-        <div className="p-4 pt-0">
-          <p className="text-gray-700">{children}</p>
+        <div className="p-8 pt-0">
+          <p className="text-gray-400">{children}</p>
         </div>
       )}
     </div>
@@ -44,10 +46,10 @@ const Item = ({ title, children }) => {
 
 const Faq = (props) => {
   return (
-    <div className="w-full flex flex-col gap-6">
-      <div className="flex">
-        <h2 className="md:text-3xl text-xl font-bold tracking-tight text-black">
-          Questions posées fréquemment
+    <div className="w-full flex flex-col gap-12 max-w-2xl px-mobile_padding">
+      <div className="flex w-full">
+        <h2 className="md:text-3xl text-xl font-bold tracking-tight text-black text-center w-full">
+          FAQ
         </h2>
       </div>
 

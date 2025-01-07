@@ -3,7 +3,6 @@ import MostSeenTrainings from "./components/MostSeenTrainings";
 import Testimonial from "./components/Testimonial";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Advisors from "./components/Advisors";
-import TopCategories from "./components/TopCategories";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Timeline from "./components/Timeline";
@@ -20,7 +19,6 @@ const Home = () => {
     <section className="flex flex-col">
       <Slider />
       <Categories />
-      {/* <TopCategories /> */}
       <WhyChooseUs />
       <MostSeenTrainings
         title="Nos formations incontournables pour les professionnels de santé !"

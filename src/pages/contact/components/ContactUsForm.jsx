@@ -60,7 +60,7 @@ const ContactUsForm = () => {
         <div className="w-full flex justify-end">
           <button
             type="submit"
-            className="sm:w-fit w-full text-white font-medium sm:text-base text-sm px-8 py-4 rounded-full bg-[#5869d4] hover:bg-[#20C997] transition-all duration-500 ease-in-out"
+            className="sm:w-fit w-full text-white font-medium sm:text-base text-sm px-6 py-2 rounded-full bg-primary hover:bg-secondary hover:text-primary border border-transparent hover:border-primary transition-all duration-500 ease-in-out"
           >
             Envoyer
           </button>
